@@ -78,11 +78,11 @@ body {
 }
 
 #product {
-    background-image: url('GlowCardsSheet.jpg')
+    background-image: url('GlowCardsSheet.jpg');
 }
 
 #contact {
-    background-image: url('20240319194016.png')
+    background-image: url('20240319194016.png');
 }
 
 .glassmorphism {
