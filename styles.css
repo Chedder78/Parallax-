@@ -19,6 +19,7 @@ body {
     background: linear-gradient(to right, #ff6f61, #ff7f50);
 }
 
+
 .header {
     position: fixed;
     width: 100%;
@@ -74,6 +75,14 @@ body {
 
 #about {
     background-image: url('pop_cult_kids.jpg');
+}
+
+#product {
+    background-image: url('GlowCardsSheet.jpg')
+}
+
+#contact {
+    background-image: url('20240319194016.png')
 }
 
 .glassmorphism {
