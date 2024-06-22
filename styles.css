@@ -94,6 +94,18 @@ body {
     background-image: url('20240319194016.png');
 }
 
+#extra1 {
+    background-image: url('extra1.jpg');
+}
+
+#extra2 {
+    background-image: url('extra2.jpg');
+}
+
+#extra3 {
+    background-image: url('extra3.jpg');
+}
+
 .glassmorphism {
     background: var(--background-color);
     border-radius: var(--blur-radius);
@@ -161,4 +173,72 @@ body {
 
 .footer:hover {
     background: rgba(0, 0, 0, 0.9);
+}
+
+/* Toggleable About Section */
+#about {
+    display: none;
+}
+
+#about-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+}
+
+#about-button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+#about-box {
+    background: var(--background-color);
+    border-radius: var(--blur-radius);
+    backdrop-filter: blur(var(--blur-radius));
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+    display: none;
+    transition: all var(--transition-speed);
+}
+
+#about-box.open {
+    display: block;
+}
+
+/* Dynamic Button Style for Interaction */
+.button-interaction {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.button-interaction:hover {
+    background-color: #ff4f41;
+    transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated-element {
+    animation: fadeIn 2s ease-in-out;
 }
