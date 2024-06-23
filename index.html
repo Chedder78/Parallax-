@@ -6,7 +6,7 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <div class="logo" img src="">CaliDef Collectables</div>
+            <div class="logo">Logo</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-section">About</a></li>
@@ -17,6 +17,7 @@
     </header>
 
     <section id="home" class="parallax">
+        <img src="calidef_bootleg_empire.jpg" alt="Home Image">
         <div class="content animated-element">Welcome to our website</div>
     </section>
 
@@ -28,29 +29,77 @@
     </section>
 
     <section id="product" class="parallax">
+        <img src="GlowCardsSheet.jpg" alt="Product Image">
         <div class="content animated-element">Our Products</div>
     </section>
 
     <section id="contact" class="parallax">
+        <video autoplay muted loop>
+            <source src="contact-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="content animated-element">Contact Us</div>
     </section>
 
     <section id="extra1" class="parallax">
+        <img src="extra1.jpg" alt="Extra Image 1">
         <div class="content animated-element">Extra Section 1</div>
     </section>
 
     <section id="extra2" class="parallax">
+        <video autoplay muted loop>
+            <source src="extra2-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="content animated-element">Extra Section 2</div>
     </section>
 
     <section id="extra3" class="parallax">
+        <img src="extra3.jpg" alt="Extra Image 3">
         <div class="content animated-element">Extra Section 3</div>
     </section>
 
     <footer class="footer">
-        <p>Footer Content</p>
+        <p>Follow us on:</p>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+            <li><a href="https://www.pinterest.com" target="_blank">Pinterest</a></li>
+        </ul>
+        <p>Explore AI Tools:</p>
+        <ul class="ai-tools-links">
+            <li><a href="https://leonardo.ai" target="_blank">Leonardo.ai</a></li>
+            <li><a href="https://kaiber.ai" target="_blank">Kaiber.ai</a></li>
+            <li><a href="https://runwayml.com" target="_blank">RunwayML</a></li>
+            <li><a href="https://ideogram.ai" target="_blank">Ideogram.ai</a></li>
+            <li><a href="https://creator.nightcafe.studio" target="_blank">NightCafe Studio</a></li>
+            <li><a href="https://deforumstable.diffusion" target="_blank">#deforumstablediffusion</a></li>
+        </ul>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JavaScript for Interactive Elements -->
+    <script>
+        document.getElementById('about-button').addEventListener('click', function() {
+            var aboutBox = document.getElementById('about-box');
+            if (aboutBox.classList.contains('open')) {
+                aboutBox.classList.remove('open');
+            } else {
+                aboutBox.classList.add('open');
+            }
+        });
+
+        // Example of smooth scroll for the navigation
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
