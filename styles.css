@@ -4,16 +4,19 @@
     --background-color: rgba(255, 255, 255, 0.2);
     --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     --blur-radius: 15px;
-    --font-family: 'Poppins', sans-serif;
+    --font-family-header: 'Poppins', sans-serif;
+    --font-family-heading: 'Roboto', sans-serif;
+    --font-family-paragraph: 'Roboto', sans-serif;
     --transition-speed: 0.3s;
     --header-height: 80px;
+    --dark-background: #121212;
+    --dark-text: #e0e0e0;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-family);
 }
 
 body {
@@ -22,6 +25,8 @@ body {
     color: var(--secondary-color);
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: var(--font-family-paragraph);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 .header {
@@ -34,6 +39,7 @@ body {
     box-shadow: var(--box-shadow);
     z-index: 1000;
     transition: all var(--transition-speed) ease;
+    font-family: var(--font-family-header);
 }
 
 .navbar {
@@ -114,6 +120,10 @@ body {
     text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -178,6 +188,10 @@ body {
     color: var(--primary-color);
 }
 
+.footer i {
+    margin-right: 0.5rem;
+}
+
 /* Toggleable About Section */
 #about {
     display: none;
@@ -195,7 +209,7 @@ body {
 }
 
 #about-button:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: #ff4f41;
 }
 
 #about-box {
@@ -244,4 +258,157 @@ body {
 
 .animated-element {
     animation: fadeIn 2s ease-in-out;
+}
+
+/* Testimonial Carousel */
+#testimonials {
+    background: var(--background-color);
+    padding: 4rem 2rem;
+    border-radius: var(--blur-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.testimonial-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-item {
+    flex: 0 0 100%;
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+    padding: 2rem;
+}
+
+.testimonial-item.active {
+    opacity: 1;
+}
+
+.carousel-control {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color var(--transition-speed);
+}
+
+#prev-testimonial {
+    left: 0;
+}
+
+#next-testimonial {
+    right: 0;
+}
+
+.carousel-control:hover {
+    color: var(--secondary-color);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--dark-background);
+        color: var(--dark-text);
+    }
+
+    .header, .parallax, .glassmorphism, .content, .footer {
+        background: var(--dark-background);
+    }
+
+    .navbar a, .footer a {
+        color: var(--dark-text);
+    }
+
+    .button-interaction {
+        background-color: var(--primary-color);
+    }
+
+    .button-interaction:hover {
+        background-color: #ff4f41;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .glassmorphism {
+        padding: 1.5rem;
+    }
+
+    .button-interaction {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 0.5rem 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    .parallax {
+        height: 50vh;
+    }
+
+    .content {
+        padding: 4rem 1rem;
+    }
+
+    .glassmorphism {
+        padding: 1rem;
+    }
+
+    .button-interaction {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.25rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .glassmorphism {
+        padding: 0.75rem;
+    }
+
+    .button-interaction {
+        padding: 0.5rem;
+    }
 }
