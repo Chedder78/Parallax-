@@ -26,7 +26,7 @@ body {
 .parallax_1 {
     /* The image used */
     background-image: url('20220202_223816.jpg');
-    
+    background-color: --background-color
     /* Set a specific height */
     height: 500px;
 
