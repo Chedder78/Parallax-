@@ -3,64 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exquisitely Intriguing Parallax Webpage</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <title>Original Series Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <meta name="description" content="Original Series Cards - Your destination for vintage Garbage Pail Kids (GPK) cards, sets, errors, subsets, merch, and more.">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <ul>
-                <li><a href="#section1">Section 1</a></li>
-                <li><a href="#section2">Section 2</a></li>
-                <li><a href="#section3">Section 3</a></li>
-                <li><a href="#section4">Section 4</a></li>
-                <li><a href="#section5">Section 5</a></li>
-            </ul>
-        </nav>
-        <h1>Welcome to the Exquisitely Intriguing Parallax Webpage</h1>
+    <div class="stars"></div>
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+    <header>
+        <div class="container">
+            <h1>Original Series Cards</h1>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Products</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="cta-button">Shop Now</button>
+            <button id="darkModeToggle" class="toggle-switch">Toggle Dark Mode</button>
+        </div>
     </header>
-
-    <section id="section1" class="parallax parallax1">
-        <div class="content glassmorphism-box">
-            <h2>Section 1</h2>
-            <p>This is the first section with a parallax background.</p>
+    
+    <main>
+            <div class="container">
+                <h2>Your Vintage GPK Destination</h2>
+                <p>Discover rare and vintage Garbage Pail Kids (GPK) cards, sets, errors, subsets, merch, and more.</p>
+                <a href="#services" class="cta-button">Explore Products</a>
+                <img src="gpk background.png" alt="Hero Image" class="enhanced-image" loading="lazy">
+            </div>
+        </section>
+        
+        <section id="about" class="about" data-scroll>
+            <div class="container">
+                <h2>About Us</h2>
+                <p>CaliDef Collectables is dedicated to bringing you the best in vintage Garbage Pail Kids cards.</p>
+            </div>
+        </section>
+        
+     
+        <section>
+            <div>
+            <p>Products</p>
+            </div>
+       <div id="largeBox1" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="GPK 3">
+                <img src="https://via.placeholder.com/300" alt="GPK 3">
+                <img src="https://via.placeholder.com/300" alt="GPK 3">                
+                <img src="https://via.placeholder.com/300" alt="GPK 3">             
+                <img src="https://via.placeholder.com/300" alt="GPK 3">
+                <p>Garbage Pail Kids Series 3</p>
+            </div>
         </div>
-    </section>
-
-    <section id="section2" class="content-section">
-        <div class="content glassmorphism-box">
-            <h2>Section 2</h2>
-            <p>This section contains regular content.</p>
+        <div id="largeBox2" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="GPK Set 1">
+                <p>Garbage Pail Kids Series 4</p>
+            </div>
         </div>
-    </section>
-
-    <section id="section3" class="parallax parallax2">
-        <div class="content glassmorphism-box">
-            <h2>Section 3</h2>
-            <p>This is the second section with a parallax background.</p>
+        <div id="largeBox3" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="GPK Error 1">
+                <p>Garbage Pail Kids Series 5</p>
+            </div>
         </div>
-    </section>
-
-    <section id="section4" class="parallax parallax3">
-        <div class="content glassmorphism-box">
-            <h2>Section 4</h2>
-            <p>This is the third section with a parallax background.</p>
+        <div id="largeBox4" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="GPK Subset 1">
+                <p>Garbage Pail Kids Series 6</p>
+            </div>
         </div>
-    </section>
-
-    <section id="section5" class="parallax parallax4">
-        <div class="content glassmorphism-box">
-            <h2>Section 5</h2>
-            <p>This is the fourth section with a parallax background.</p>
+        <div id="largeBox5" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="Merchandise 1">
+                <p>Garbage Pail Kids Series 7</p>
+            </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <p>Footer content goes here</p>
+        <div id="largeBox6" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="Miscellaneous 1">
+               <p>Garbage Pail Kids Series 8</p>
+            </div>
+        <div id="largeBox6" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="Miscellaneous 1">
+               <p>Garbage Pail Kids Series 9</p>
+            </div>
+        </div>
+            <div id="largeBox6" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="Miscellaneous 1">
+               <p>Garbage Pail Kids Series 10</p>
+            </div>
+        </div>
+            <div id="largeBox6" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="Miscellaneous 1">
+               <p>Garbage Pail Kids Series 11</p>
+            </div>
+        <div id="largeBox6" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="Miscellaneous 1">
+               <p>Garbage Pail Kids Series 12</p>
+            </div>
+        </div>
+            <div id="largeBox6" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="Miscellaneous 1">
+               <p>Garbage Pail Kids Series 13</p>
+            </div>
+        </div>
+            <div id="largeBox6" class="large-box">
+            <div class="scroll-container">
+                <img src="https://via.placeholder.com/300" alt="Miscellaneous 1">
+               <p>Garbage Pail Kids Series 14</p>
+            </div>
+        </div>
+        
+        <section id="blog" class="blog" data-scroll>
+            <div class="container">
+                <h2>Latest Articles</h2>
+                <div class="articles">
+                    <article data-scroll>
+                        <h3>Top 10 Rarest GPK Cards</h3>
+                        <p>Discover the rarest GPK cards and their unique stories.</p>
+                    </article>
+                    <article data-scroll>
+                        <h3>How to Spot Fake GPK Cards</h3>
+                        <p>Learn the tips and tricks to identify authentic GPK cards.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact" data-scroll>
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Original Series Cards. All rights reserved.</p>
+   </div>
+</div>
     </footer>
-
+</div>
+   </div>
+       <button id="backToTop" title="Back to top">↑</button>
+   </div>
+</div>  
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Dark Mode Toggle
+            const toggleSwitch = document.getElementById('darkModeToggle');
+            toggleSwitch.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
+
+            // Loading Animation
+            window.addEventListener('load', () => {
+                document.querySelector('.loading').style.display = 'none';
+            });
+
+            // Back to Top Button
+            const backToTopButton = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Scroll Animations
+            const scrollElements = document.querySelectorAll('[data-scroll]');
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('scrolled');
+            };
+
+            const hideScrollElement = (element) => {
+                element.classList.remove('scrolled');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                        displayScrollElement(el);
+                    } else {
+                        hideScrollElement(el);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+
+            // Initial check to show elements already in view
+            handleScrollAnimation();
+
+            // Search Functionality
+            const searchInput = document.getElementById('search');
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.toLowerCase();
+                document.querySelectorAll('.card').forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    card.style.display = text.includes(query) ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Function to open the corresponding large box
+        function openLargeBox(boxId) {
+            var box = document.getElementById('largeBox' + boxId);
+            box.style.display = 'block'; // Show the large box
+            // Add functionality to close the box when clicked outside
+            window.onclick = function(event) {
+                if (event.target == box) {
+                    box.style.display = 'none'; // Hide the box
+                }
+            }
+        }
+    </script>
 </body>
-</html>
+        </html>
