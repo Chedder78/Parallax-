@@ -25,7 +25,7 @@ body {
 }
 .parallax_1 {
     /* The image used */
-    background-image: url('path/to/your/image.jpg');
+    background-image: url('20220202_223816.jpg');
     
     /* Set a specific height */
     height: 500px;
@@ -38,7 +38,7 @@ body {
 }
 .parallax_2 {
     /* The image used */
-    background-image: url('path/to/your/image.jpg');
+    background-image: url('20220506_115059.jpg');
     
     /* Set a specific height */
     height: 500px;
@@ -51,7 +51,7 @@ body {
 }
 .parallax_3 {
     /* The image used */
-    background-image: url('path/to/your/image.jpg');
+    background-image: url('20240617_200446.jpg');
     
     /* Set a specific height */
     height: 500px;
