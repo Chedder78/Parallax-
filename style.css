@@ -187,7 +187,7 @@ nav ul li a:focus {
 
 /* Hero Section Styles */
 .hero {
-    background: img scr="calidef_bootleg_empire.jpg" alt="photo File inactive" no-repeat center center/cover;
+    background-image: url("calidef_bootleg_empire.jpg") alt="photo File inactive" no-repeat center center/cover;
     color: var(--text-color);
     padding: 60px 0;
     text-align: center;
