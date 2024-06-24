@@ -603,6 +603,33 @@ footer.scrolled {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+@font-face {
+    font-family: 'StinkOnTheDeath';
+    src: url('fonts/Stink on the Death.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MeltedMonster';
+    src: url('fonts/Melted_Monster (1).ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DarkRoast';
+    src: url('fonts/Dark Roast.ttf') format('truetype');
+}
+
+body {
+    font-family: 'StinkOnTheDeath', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'MeltedMonster', sans-serif;
+}
+
+p {
+    font-family: 'DarkRoast', sans-serif;
+}
+
 
 .active, .dot:hover {
     background-color: white;
