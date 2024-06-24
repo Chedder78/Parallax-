@@ -311,7 +311,7 @@ nav ul li a:focus {
 }
 
 /* Blog Section Styles */
-.blog {
+.More {
     background: linear-gradient(135deg, var(--background-color), var(--gradient-color-1));
     color: var(--text-color);
     padding: 60px 0;
@@ -322,24 +322,24 @@ nav ul li a:focus {
     transform: translateY(20px);
 }
 
-.blog.scrolled {
+.More.scrolled {
     opacity: 1;
     transform: translateY(0);
 }
 
-.blog h2 {
+.More h2 {
     font-size: 2em;
     margin: 0;
 }
 
-.blog .articles {
+.More .articles {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
 }
 
-.blog article {
+.More article {
     background: var(--card-bg-color);
     padding: 20px;
     width: 45%;
@@ -353,23 +353,23 @@ nav ul li a:focus {
     transform: translateY(20px);
 }
 
-.blog article.scrolled {
+.More article.scrolled {
     opacity: 1;
     transform: translateY(0);
 }
 
-.blog article:hover,
-.blog article:focus {
+.More article:hover,
+.More article:focus {
     transform: translateY(-10px);
     outline: none;
 }
 
-.blog article h3 {
+.More article h3 {
     font-size: 1.5em;
     margin: 0 0 10px 0;
 }
 
-.blog article p {
+.More article p {
     font-size: 1em;
 }
 
