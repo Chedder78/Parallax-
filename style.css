@@ -129,7 +129,7 @@ button {
 header {
     background: linear-gradient(135deg, var(--gradient-color-1), var(--gradient-color-2));
     color: var(--text-color);
-    padding: 20px 0;
+    padding: 0px 0;
     text-align: center;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
