@@ -4,21 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toggle sliding menu
     const menuToggle = document.getElementById('menu-toggle');
     const slidingMenu = document.getElementById('sliding-menu');
-    const closeMenu = document.getElementById('close-menu');
+    const overlay = document.getElementById('overlay');
 
     menuToggle.addEventListener('click', () => {
         slidingMenu.classList.toggle('show-menu');
-    });
-
-    closeMenu.addEventListener('click', () => {
-        slidingMenu.classList.remove('show-menu');
+        overlay.style.display = slidingMenu.classList.contains('show-menu') ? 'block' : 'none';
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!slidingMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-            slidingMenu.classList.remove('show-menu');
-        }
+    overlay.addEventListener('click', () => {
+        slidingMenu.classList.remove('show-menu');
+        overlay.style.display = 'none';
     });
 
     // Example products
