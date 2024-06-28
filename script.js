@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Example products
     const products = [
-        { name: "GPK Product 1", price: 10.00, img: "https://via.placeholder.com/250" },
-        { name: "GPK Product 2", price: 15.00, img: "https://via.placeholder.com/250" },
-        { name: "GPK Product 3", price: 20.00, img: "https://via.placeholder.com/250" },
-        { name: "GPK Product 4", price: 25.00, img: "https://via.placeholder.com/250" }
+        { name: "GPK Product 1", price: 10.00, img: "https://via.placeholder.com/250x400" },
+        { name: "GPK Product 2", price: 15.00, img: "https://via.placeholder.com/250x400" },
+        { name: "GPK Product 3", price: 20.00, img: "https://via.placeholder.com/250x400" },
+        { name: "GPK Product 4", price: 25.00, img: "https://via.placeholder.com/250x400" }
     ];
 
     // Dynamically create product items in the "All Products" section
