@@ -1,3 +1,4 @@
+/* Common styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -111,6 +112,7 @@ header nav ul li a {
     background: #f4f4f4;
     position: relative;
     z-index: 1;
+    margin-top: 80px; /* Added margin to ensure content is not hidden behind the fixed header */
 }
 
 .categories-section h2,
@@ -137,6 +139,7 @@ header nav ul li a {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .category-item img,
@@ -145,6 +148,7 @@ header nav ul li a {
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 .add-to-cart {
@@ -154,8 +158,18 @@ header nav ul li a {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 80px;
+    margin-top: 10px;
     border-radius: 5px;
+}
+
+.scroll-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.product-grid {
+    display: inline-flex;
+    gap: 20px;
 }
 
 footer {
