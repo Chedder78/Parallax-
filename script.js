@@ -189,4 +189,17 @@ document.addEventListener('DOMContentLoaded', () => {
             product.style.display = text.includes(query) ? 'block' : 'none';
         });
     });
+
+    // Image enlargement functionality
+    document.querySelectorAll('.product-item img').forEach(img => {
+        img.addEventListener('click', (e) => {
+            img.style.transform = 'scale(1.25)';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!img.contains(e.target)) {
+                img.style.transform = 'scale(1)';
+            }
+        });
+    });
 });
