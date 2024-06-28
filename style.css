@@ -65,23 +65,23 @@ header nav ul li a {
 }
 
 .parallax-1 {
-    background-image: url('https://via.placeholder.com/1920x500');
+    background-image: url('images/parallax-1.jpg');
 }
 
 .parallax-2 {
-    background-image: url('https://via.placeholder.com/1920x500');
+    background-image: url('images/parallax-2.jpg');
 }
 
 .parallax-3 {
-    background-image: url('https://via.placeholder.com/1920x500');
+    background-image: url('images/parallax-3.jpg');
 }
 
 .parallax-4 {
-    background-image: url('https://via.placeholder.com/1920x500');
+    background-image: url('images/parallax-4.jpg');
 }
 
 .parallax-5 {
-    background-image: url('https://via.placeholder.com/1920x500');
+    background-image: url('images/parallax-5.jpg');
 }
 
 .hero-section {
@@ -141,8 +141,9 @@ header nav ul li a {
 
 .category-item img,
 .product-item img {
-    max-width: 100%;
-    height: auto;
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
