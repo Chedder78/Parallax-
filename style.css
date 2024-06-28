@@ -91,7 +91,7 @@ main {
 .parallax {
     height: 500px;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 
