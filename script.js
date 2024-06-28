@@ -189,3 +189,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 displayScrollElement(el);
             } else {
                 hideScrollElement(el);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+    // Initial check to show elements already in view
+    handleScrollAnimation();
+
+    // Search Functionality
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        document.querySelectorAll('.product-item').forEach(product => {
+            const text = product.textContent.toLowerCase();
+            product.style.display = text.includes(query) ? 'block' : 'none';
+        });
+    });
+
+    // Image enlargement functionality
+    document.querySelectorAll('.product-item img').forEach(img => {
+        img.addEventListener('click', (e) => {
+            img.style.transform = 'scale(1.25)';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!img.contains(e.target)) {
+                img.style.transform = 'scale(1)';
+            }
+        });
+    });
+});
