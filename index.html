@@ -33,7 +33,12 @@
     <div id="overlay"></div>
 
     <main>
-        <div class="parallax parallax-1"></div>
+        <div class="parallax parallax-1">
+            <div class="content">
+                <h2>Welcome to CaliDef Collectables</h2>
+                <p>Your ultimate destination for vintage GPK cards and merchandise.</p>
+            </div>
+        </div>
 
         <section id="home" class="hero-section">
             <div class="container">
@@ -43,7 +48,11 @@
             </div>
         </section>
 
-        <div class="parallax parallax-2"></div>
+        <div class="parallax parallax-2">
+            <div class="content">
+                <h2>Categories</h2>
+            </div>
+        </div>
 
         <section id="categories" class="categories-section">
             <div class="container">
@@ -69,7 +78,11 @@
             </div>
         </section>
 
-        <div class="parallax parallax-3"></div>
+        <div class="parallax parallax-3">
+            <div class="content">
+                <h2>Featured Products</h2>
+            </div>
+        </div>
 
         <section id="featured" class="featured-section">
             <div class="container">
@@ -103,7 +116,11 @@
             </div>
         </section>
 
-        <div class="parallax parallax-4"></div>
+        <div class="parallax parallax-4">
+            <div class="content">
+                <h2>All Products</h2>
+            </div>
+        </div>
 
         <section id="products" class="products-section">
             <div class="container">
@@ -116,7 +133,11 @@
             </div>
         </section>
 
-        <div class="parallax parallax-5"></div>
+        <div class="parallax parallax-5">
+            <div class="content">
+                <h2>Contact Us</h2>
+            </div>
+        </div>
 
         <section id="contact" class="contact-section">
             <div class="container">
@@ -148,6 +169,25 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('sliding-menu');
+            var overlay = document.getElementById('overlay');
+            if (menu.classList.contains('show-menu')) {
+                menu.classList.remove('show-menu');
+                overlay.style.display = 'none';
+            } else {
+                menu.classList.add('show-menu');
+                overlay.style.display = 'block';
+            }
+        });
+
+        document.getElementById('overlay').addEventListener('click', function() {
+            var menu = document.getElementById('sliding-menu');
+            var overlay = document.getElementById('overlay');
+            menu.classList.remove('show-menu');
+            overlay.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
