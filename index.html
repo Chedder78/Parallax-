@@ -33,20 +33,19 @@
     <div id="overlay"></div>
 
     <main>
-        <div class="parallax parallax-1">
-            <div class="content">
-            </div>
-        </div>
+        <div class="parallax parallax-1"></div>
 
         <section id="home" class="hero-section">
             <div class="container">
+                <h2>Discover Vintage Garbage Pail Kids Cards</h2>
+                <p>Your ultimate destination for GPK cards and merchandise.</p>
                 <a href="#products" class="cta-button">Shop Now</a>
             </div>
         </section>
 
-        <div class="parallax parallax-2">
-            <div class="content">
-                   <section id="categories" class="categories-section">
+        <div class="parallax parallax-2"></div>
+
+        <section id="categories" class="categories-section">
             <div class="container">
                 <h2>Categories</h2>
                 <div class="category-grid">
@@ -70,33 +69,33 @@
             </div>
         </section>
 
-        <div class="parallax parallax-3">
-            <div class="content">
+        <div class="parallax parallax-3"></div>
+
         <section id="featured" class="featured-section">
             <div class="container">
                 <h2>Featured Products</h2>
                 <div class="featured-grid">
                     <div class="product-item">
                         <img src="https://via.placeholder.com/250x400" alt="Product 1">
-                        <h3>GPK 1</h3>
+                        <h3>GPK Product 1</h3>
                         <p>$10.00</p>
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
                     <div class="product-item">
                         <img src="https://via.placeholder.com/250x400" alt="Product 2">
-                        <h3>GPK 2</h3>
+                        <h3>GPK Product 2</h3>
                         <p>$15.00</p>
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
                     <div class="product-item">
                         <img src="https://via.placeholder.com/250x400" alt="Product 3">
-                        <h3>GPK 3</h3>
+                        <h3>GPK Product 3</h3>
                         <p>$20.00</p>
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
                     <div class="product-item">
                         <img src="https://via.placeholder.com/250x400" alt="Product 4">
-                        <h3>GPK 4</h3>
+                        <h3>GPK Product 4</h3>
                         <p>$25.00</p>
                         <button class="add-to-cart">Add to Cart</button>
                     </div>
@@ -104,8 +103,8 @@
             </div>
         </section>
 
-        <div class="parallax parallax-4">
-            <div class="content">
+        <div class="parallax parallax-4"></div>
+
         <section id="products" class="products-section">
             <div class="container">
                 <h2>All Products</h2>
@@ -117,8 +116,8 @@
             </div>
         </section>
 
-        <div class="parallax parallax-5">
-            <div class="content">
+        <div class="parallax parallax-5"></div>
+
         <section id="contact" class="contact-section">
             <div class="container">
                 <h2>Contact Us</h2>
@@ -167,6 +166,15 @@
             var overlay = document.getElementById('overlay');
             menu.classList.remove('show-menu');
             overlay.style.display = 'none';
+        });
+
+        document.querySelectorAll('#sliding-menu ul li a').forEach(function(menuItem) {
+            menuItem.addEventListener('click', function() {
+                var menu = document.getElementById('sliding-menu');
+                var overlay = document.getElementById('overlay');
+                menu.classList.remove('show-menu');
+                overlay.style.display = 'none';
+            });
         });
     </script>
 </body>
