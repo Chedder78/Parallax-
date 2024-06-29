@@ -259,8 +259,4 @@ footer .social-links a:hover {
         gap: 10px;
         margin-top: 10px;
     }
-
-    .parallax {
-        background-attachment: scroll; /* Disable parallax effect on smaller screens */
-    }
 }
