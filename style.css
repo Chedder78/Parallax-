@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Melted Monster';
-    src: url('Melted_Monster.ttf') format('truetype');
+    src: url('Melted_Monster (1).ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -127,7 +127,7 @@ main {
 }
 
 .parallax-1 {
-    background-image: src('tjLeFGMSSKq7BAtRQchAiw.png'); /* Placeholder for parallax image */
+    background-image: img src('tjLeFGMSSKq7BAtRQchAiw.png'); /* Placeholder for parallax image */
 }
 
 .parallax-2 {
