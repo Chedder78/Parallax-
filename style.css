@@ -129,7 +129,7 @@ main {
 .parallax > .content {
     position: relative;
     z-index: 2;
-    color: #fff;
+    color: black;
     @font-face: 'DarkRoast';
     text-align: center;
     padding: 20px;
@@ -156,8 +156,8 @@ main {
 }
 
 .hero-section {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    background: black;
+    color: white;
     @font-face: 'MeltedMonster';
     text-align: center;
     padding: 100px 20px;
@@ -166,8 +166,8 @@ main {
 }
 
 .hero-section .cta-button {
-    background: #e74c3c;
-    color: #fff;
+    background: black;
+    color: white;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
@@ -180,7 +180,7 @@ main {
 .contact-section,
 .cart-section {
     padding: 60px 20px;
-    background: #f4f4f4;
+    background: black;
     position: relative;
     z-index: 1;
 }
@@ -204,11 +204,11 @@ main {
 
 .category-item,
 .product-item {
-    background: #fff;
+    background: black;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     transition: transform 0.3s ease;
 }
 
@@ -224,8 +224,8 @@ main {
 }
 
 .add-to-cart {
-    background: #e74c3c;
-    color: #fff;
+    background: black;
+    color: white;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
@@ -245,8 +245,8 @@ main {
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: black;
+    color: white;
     text-align: center;
     padding: 20px 0;
 }
