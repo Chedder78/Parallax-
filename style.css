@@ -1,6 +1,21 @@
+/* Adding custom fonts */
+@font-face {
+    font-family: 'DarkRoast';
+    src: url('fonts/DarkRoast-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MeltedMonster';
+    src: url('fonts/MeltedMonster-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Common styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DarkRoast', sans-serif; /* Applying custom font to the body */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -40,6 +55,7 @@ header .logo img {
 header .logo h1 {
     margin: 0;
     font-size: 1.5rem;
+    font-family: 'MeltedMonster', sans-serif; /* Applying another custom font to the logo */
 }
 
 .menu-toggle {
@@ -157,6 +173,7 @@ main {
 .contact-section h2 {
     text-align: center;
     margin-bottom: 40px;
+    font-family: 'MeltedMonster', sans-serif; /* Applying custom font to section headers */
 }
 
 .category-grid,
