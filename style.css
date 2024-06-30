@@ -1,5 +1,11 @@
 /* Common styles */
 body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
     @@font-face {
     font-family: 'StinkOnTheDeath';
     src: url('./Stink on the Death.ttf') format('truetype');
@@ -14,11 +20,7 @@ body {
     font-family: 'DarkRoast';
     src: url('./Dark Roast.ttf') format('truetype');
 }
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    justify-content: center;
-}
+    
 
 header {
     background: #333;
@@ -44,6 +46,7 @@ header .logo h1 {
 }
 
 .menu-toggle {
+    @font-face: 'Darkroast';
     background: none;
     border: none;
     color: #fff;
@@ -75,6 +78,7 @@ header .logo h1 {
 
 .sliding-menu ul li a {
     color: #fff;
+    @font-face: 'DarkRoast';
     text-decoration: none;
     display: block;
 }
@@ -126,6 +130,7 @@ main {
     position: relative;
     z-index: 2;
     color: #fff;
+    @font-face: 'DarkRoast';
     text-align: center;
     padding: 20px;
 }
@@ -153,6 +158,7 @@ main {
 .hero-section {
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
+    @font-face: 'MeltedMonster';
     text-align: center;
     padding: 100px 20px;
     position: relative;
