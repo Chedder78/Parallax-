@@ -39,15 +39,15 @@ header .logo h1 {
 
 .sliding-menu {
     position: fixed;
-    top: 0;
+    top: 15px;
     left: -250px;
     width: 250px;
-    height: 100%;
+    height: 50%;
     background: #333;
     color: #fff;
     transition: left 0.3s ease;
     z-index: 1001;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
 .sliding-menu ul {
@@ -89,7 +89,7 @@ main {
 }
 
 .parallax {
-    height: 100vh; /* Full viewport height */
+    height: 856px; /* Full viewport height */
     min-height: 350px; /* Minimum height for smaller screens */
     background-attachment: fixed;
     background-size: cover;
@@ -102,8 +102,8 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 856px;
     background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
     z-index: 1;
 }
@@ -118,7 +118,9 @@ main {
 
 .parallax-1 {
     background-image: url('tjLeFGMSSKq7BAtRQchAiw.png');
-}
+    width: 856px;
+    height: auto;
+    }
 
 .parallax-2 {
     background-image: url('Os1 character cover.png');
