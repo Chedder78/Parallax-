@@ -1,14 +1,14 @@
 /* Adding custom fonts */
 @font-face {
     font-family: 'Dark Roast';
-    src: url('fonts/Dark_Roast.ttf') format('truetype');
+    src: url('Dark_Roast.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Melted Monster';
-    src: url('fonts/Melted_Monster.ttf') format('truetype');
+    src: url('Melted_Monster.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -126,23 +126,23 @@ main {
 }
 
 .parallax-1 {
-    background-image: url('images/tjLeFGMSSKq7BAtRQchAiw.png'); /* Placeholder for parallax image */
+    background-image: url('tjLeFGMSSKq7BAtRQchAiw.png'); /* Placeholder for parallax image */
 }
 
 .parallax-2 {
-    background-image: url('images/Os1_character_cover.png'); /* Placeholder for parallax image */
+    background-image: url('Os1_character_cover.png'); /* Placeholder for parallax image */
 }
 
 .parallax-3 {
-    background-image: url('images/IMG_20240306_224148_407.jpg'); /* Placeholder for parallax image */
+    background-image: url('IMG_20240306_224148_407.jpg'); /* Placeholder for parallax image */
 }
 
 .parallax-4 {
-    background-image: url('images/20240319194016.png'); /* Placeholder for parallax image */
+    background-image: url('20240319194016.png'); /* Placeholder for parallax image */
 }
 
 .parallax-5 {
-    background-image: url('images/20220202_223816.jpg'); /* Placeholder for parallax image */
+    background-image: url('/20220202_223816.jpg'); /* Placeholder for parallax image */
 }
 
 .hero-section,
