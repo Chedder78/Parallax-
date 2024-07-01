@@ -8,8 +8,8 @@
 }
 
 @font-face {
-    font-family: 'Melted_Monster';
-    src: url('Melted_Monster.ttf') format('truetype');
+    font-family: 'Melted Monster';
+    src: url('Melted Monster.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -32,7 +32,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    font-family: 'Melted_Monster'
+    font-family: 'Melted Monster'
 }
 
 header .container {
@@ -57,7 +57,7 @@ header .logo img {
 header .logo h1 {
     margin: 0;
     font-size: 2rem;
-    font-family: 'Melted_Monster', sans-serif; /* Applying another custom font to the logo */
+    font-family: 'Melted Monster', sans-serif; /* Applying another custom font to the logo */
 }
 
 .menu-toggle {
@@ -177,7 +177,7 @@ main {
 .contact-section h2 {
     text-align: center;
     margin-bottom: 40px;
-    font-family: 'Melted_Monster (1).ttf', sans-serif; /* Applying custom font to section headers */
+    font-family: 'Melted Monster', sans-serif; /* Applying custom font to section headers */
 }
 
 .category-grid,
@@ -214,7 +214,7 @@ main {
 .add-to-cart {
     background: #e74c3c;
     color: #fff;
-    font-family: 'Melted_Monster', alt="sans-serif";
+    font-family: 'Melted Monster';
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
