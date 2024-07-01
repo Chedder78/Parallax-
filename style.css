@@ -11,18 +11,19 @@
     src: url('Melted Monster.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    font-color: green;
+    color: green;
 }
 
 /* Common styles */
 body {
     font-family: 'Dark Roast', sans-serif; /* Applying custom font to the body */
+    font-size: 30px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     background-color: #000;
     color: #fff;
-    font-size: 20px;
+    
 }
 
 header {
