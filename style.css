@@ -117,11 +117,10 @@ main {
 }
 
 .parallax {
-    height: 350px;
+    height: 500px;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     position: relative;
     z-index: 1;
 }
