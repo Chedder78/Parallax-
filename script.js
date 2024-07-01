@@ -47,10 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Parallax effect
-    window.addEventListener('scroll', function() {
+    function parallaxEffect() {
         document.querySelectorAll('.parallax').forEach(function(parallaxElement) {
-            let offset = window.pageYOffset;
-            parallaxElement.style.backgroundPositionY = (offset * 0.7) + 'px';
+            var scrollPosition = window.scrollY;
+            parallaxElement.style.backgroundPositionY = (scrollPosition * 0.5) + 'px';
         });
-    });
+    }
+
+    window.addEventListener('scroll', parallaxEffect);
+    parallaxEffect(); // Initialize on load
 });
