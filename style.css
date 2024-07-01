@@ -123,6 +123,7 @@ main {
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .parallax-1 {
@@ -130,7 +131,7 @@ main {
 }
 
 .parallax-2 {
-    background-image: url('20240627031001.png'); /* Placeholder for parallax image */
+    background-image: url('Os1 character cover.png'); /* Placeholder for parallax image */
 }
 
 .parallax-3 {
