@@ -1,39 +1,31 @@
 /* Adding custom fonts */
 @font-face {
-    font-family: 'Dark Roast';
-    src: url('Dark Roast.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Melted Monster';
     src: url('Melted Monster.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-    color: green;
 }
 
 /* Common styles */
 body {
-    font-family: 'Melted Monster', sans-serif; /* Applying custom font to the body */
+    font-family: 'Melted Monster', sans-serif;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     background-color: #000;
-    font-color: green;
-    
+    color: #fff;
 }
 
 header {
     background: #000;
-    font-color: green;
+    color: #fff;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    font-family: 'Melted Monster';
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 header .container {
@@ -57,15 +49,28 @@ header .logo img {
 
 header .logo h1 {
     margin: 0;
-    font-size: 2rem;
-    font-family: 'Melted Monster', sans-serif; /* Applying another custom font to the logo */
+    font-size: 2.5rem;
+    font-family: 'Melted Monster', sans-serif;
+    background: linear-gradient(to bottom, #00ff00, #008000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    }
+    to {
+        text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00;
+    }
 }
 
 .menu-toggle {
     background: none;
     border: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -77,7 +82,7 @@ header .logo h1 {
     height: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    color: white;
+    color: #fff;
     transition: left 0.3s ease;
     z-index: 1001;
     padding-top: 60px;
@@ -96,11 +101,12 @@ header .logo h1 {
     color: #fff;
     text-decoration: none;
     display: block;
-    font-size: 25px;
+    font-size: 1.2rem;
 }
 
 .sliding-menu ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
 }
 
 .show-menu {
@@ -121,16 +127,14 @@ header .logo h1 {
 main {
     margin-top: 60px;
 }
-p {
-font-size: 20px;
-
-}
 
 .parallax {
     height: 350px;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    position: relative;
+    z-index: 1;
 }
 
 .parallax-1 {
@@ -138,11 +142,11 @@ font-size: 20px;
 }
 
 .parallax-2 {
-    background-image: url('Os1_character_cover.png'); /* Placeholder for parallax image */
+    background-image: url('Os1 character cover.png'); /* Placeholder for parallax image */
 }
 
 .parallax-3 {
-    background-image: url('20240306_224148_407.jpg'); /* Placeholder for parallax image */
+    background-image: url('IMG_20240306_224148_407.jpg'); /* Placeholder for parallax image */
 }
 
 .parallax-4 {
@@ -163,8 +167,10 @@ font-size: 20px;
     backdrop-filter: blur(10px);
     border-radius: 15px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hero-section.selected,
@@ -172,7 +178,7 @@ font-size: 20px;
 .featured-section.selected,
 .products-section.selected,
 .contact-section.selected {
-    box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.5); /* LED edge lighting effect */
+    box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.5);
 }
 
 .hero-section h2,
@@ -182,7 +188,12 @@ font-size: 20px;
 .contact-section h2 {
     text-align: center;
     margin-bottom: 40px;
-    font-family: 'Melted Monster', sans-serif; /* Applying custom font to section headers */
+    font-family: 'Melted Monster', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(to bottom, #00ff00, #008000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 1.5s infinite alternate;
 }
 
 .category-grid,
@@ -201,8 +212,18 @@ font-size: 20px;
     text-align: center;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.5rem;
+    background: linear-gradient(to bottom, #ffa500, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.category-item:hover,
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .category-item img,
@@ -219,13 +240,17 @@ font-size: 20px;
 .add-to-cart {
     background: #e74c3c;
     color: #fff;
-    font-family: 'Melted Monster';
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: #c0392b;
 }
 
 .scroll-container {
@@ -241,19 +266,20 @@ font-size: 20px;
 footer {
     background: #000;
     color: #fff;
-    font-size: 20px; 
     text-align: center;
     padding: 20px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
 footer .social-links a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer .social-links a:hover {
-    text-decoration: underline;
+    color: #00ff00;
 }
 
 @media (max-width: 768px) {
