@@ -46,14 +46,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Parallax effect
-    function parallaxEffect() {
-        document.querySelectorAll('.parallax').forEach(function(parallaxElement) {
-            var scrollPosition = window.scrollY;
-            parallaxElement.style.backgroundPositionY = (scrollPosition * 0.5) + 'px';
-        });
-    }
+    // Parallax effect using Intersection Observer and requestAnimationFrame
+    const parallaxElements = document.querySelectorAll('.parallax');
 
-    window.addEventListener('scroll', parallaxEffect);
-    parallaxEffect(); // Initialize on load
+    const observerOptions = {
+        root: null,
+        threshold: 0,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const parallaxElement = entry.target;
+                const updateParallax = () => {
+                    const scrollPosition = window.scrollY;
+                    const offset = parallaxElement.offsetTop;
+                    parallaxElement.style.backgroundPositionY = `${(scrollPosition - offset) * 0.5}px`;
+                    requestAnimationFrame(updateParallax);
+                };
+                updateParallax();
+            }
+        });
+    }, observerOptions);
+
+    parallaxElements.forEach(parallaxElement => {
+        observer.observe(parallaxElement);
+    });
 });
