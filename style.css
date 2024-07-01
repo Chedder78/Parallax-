@@ -8,8 +8,8 @@
 }
 
 @font-face {
-    font-family: 'Melted Monster';
-    src: url('Melted_Monster (1).ttf') format('truetype');
+    font-family: 'Melted_Monster';
+    src: url('Melted_Monster.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -32,7 +32,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    @font-face: href="Melted_Monster (1).ttf" 
+    font-family: 'Melted_Monster'
 }
 
 header .container {
@@ -56,15 +56,15 @@ header .logo img {
 
 header .logo h1 {
     margin: 0;
-    font-size: 3rem;
-    font-family: 'Melted_Monster (1).ttf', sans-serif; /* Applying another custom font to the logo */
+    font-size: 2rem;
+    font-family: 'Melted_Monster', sans-serif; /* Applying another custom font to the logo */
 }
 
 .menu-toggle {
     background: none;
     border: none;
     color: #fff;
-    font-size: 3rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -95,6 +95,7 @@ header .logo h1 {
     color: #fff;
     text-decoration: none;
     display: block;
+    font-size: 25px;
 }
 
 .sliding-menu ul li a:hover {
@@ -128,23 +129,23 @@ main {
 }
 
 .parallax-1 {
-    background-image: img src('tjLeFGMSSKq7BAtRQchAiw.png'); /* Placeholder for parallax image */
+    background-image: url('tjLeFGMSSKq7BAtRQchAiw.png'); /* Placeholder for parallax image */
 }
 
 .parallax-2 {
-    background-image: src('Os1_character_cover.png'); /* Placeholder for parallax image */
+    background-image: url('Os1_character_cover.png'); /* Placeholder for parallax image */
 }
 
 .parallax-3 {
-    background-image: src('20240306_224148_407.jpg'); /* Placeholder for parallax image */
+    background-image: url('20240306_224148_407.jpg'); /* Placeholder for parallax image */
 }
 
 .parallax-4 {
-    background-image: src('20240319194016.png'); /* Placeholder for parallax image */
+    background-image: url('20240319194016.png'); /* Placeholder for parallax image */
 }
 
 .parallax-5 {
-    background-image: src('20220202_223816.jpg'); /* Placeholder for parallax image */
+    background-image: url('20220202_223816.jpg'); /* Placeholder for parallax image */
 }
 
 .hero-section,
@@ -213,9 +214,10 @@ main {
 .add-to-cart {
     background: #e74c3c;
     color: #fff;
+    font-family: 'Melted_Monster', alt="sans-serif";
     border: none;
     padding: 10px 20px;
-    font-size: 3rem;
+    font-size: 1rem;
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
