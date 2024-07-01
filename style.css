@@ -14,7 +14,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: #000;
-    color: #fff;
+    color: #ffa500; /* Set to orange for readability */
 }
 
 header {
@@ -51,18 +51,16 @@ header .logo h1 {
     margin: 0;
     font-size: 2.5rem;
     font-family: 'Melted Monster', sans-serif;
-    background: linear-gradient(to bottom, #00ff00, #008000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #00ff00; /* Solid green color for the header */
     animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
     }
     to {
-        text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00;
+        text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
     }
 }
 
@@ -161,7 +159,8 @@ main {
 .categories-section,
 .featured-section,
 .products-section,
-.contact-section {
+.contact-section,
+.cart-section {
     padding: 60px 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -177,7 +176,8 @@ main {
 .categories-section.selected,
 .featured-section.selected,
 .products-section.selected,
-.contact-section.selected {
+.contact-section.selected,
+.cart-section.selected {
     box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.5);
 }
 
@@ -185,14 +185,13 @@ main {
 .categories-section h2,
 .featured-section h2,
 .products-section h2,
-.contact-section h2 {
+.contact-section h2,
+.cart-section h2 {
     text-align: center;
     margin-bottom: 40px;
     font-family: 'Melted Monster', sans-serif;
     font-size: 2rem;
-    background: linear-gradient(to bottom, #00ff00, #008000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #00ff00; /* Solid green color for the headers */
     animation: glow 1.5s infinite alternate;
 }
 
@@ -215,9 +214,7 @@ main {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 1.5rem;
-    background: linear-gradient(to bottom, #ffa500, #ff4500);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffa500; /* Solid orange color for the category and product items */
 }
 
 .category-item:hover,
