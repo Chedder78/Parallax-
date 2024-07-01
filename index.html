@@ -33,7 +33,7 @@
     <div id="overlay"></div>
 
     <main>
-        <div class=" parallax parallax-1"></div>
+        <div class="parallax parallax-1"></div>
 
         <section id="home" class="hero-section glassmorphism">
             <div class="container">
@@ -172,50 +172,6 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            var menu = document.getElementById('sliding-menu');
-            var overlay = document.getElementById('overlay');
-            if (menu.classList.contains('show-menu')) {
-                menu.classList.remove('show-menu');
-                overlay.style.display = 'none';
-            } else {
-                menu.classList.add('show-menu');
-                overlay.style.display = 'block';
-            }
-        });
-
-        document.getElementById('overlay').addEventListener('click', function() {
-            var menu = document.getElementById('sliding-menu');
-            var overlay = document.getElementById('overlay');
-            menu.classList.remove('show-menu');
-            overlay.style.display = 'none';
-        });
-
-        document.querySelectorAll('#sliding-menu ul li a').forEach(function(menuItem) {
-            menuItem.addEventListener('click', function() {
-                var menu = document.getElementById('sliding-menu');
-                var overlay = document.getElementById('overlay');
-                menu.classList.remove('show-menu');
-                overlay.style.display = 'none';
-
-                document.querySelectorAll('.glassmorphism').forEach(function(section) {
-                    section.classList.remove('selected');
-                });
-                var targetSection = document.querySelector(menuItem.getAttribute('href'));
-                if (targetSection) {
-                    targetSection.classList.add('selected');
-                }
-            });
-        });
-
-        // Parallax effect using vanilla JS
-        window.addEventListener('scroll', function() {
-            document.querySelectorAll('.parallax').forEach(function(parallaxElement) {
-                let offset = window.pageYOffset;
-                parallaxElement.style.backgroundPositionY = offset * 0.7 + 'px';
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
