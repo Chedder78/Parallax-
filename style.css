@@ -146,6 +146,10 @@ main {
     background-image: url('20220202_223816.jpg'); /* Placeholder for parallax image */
 }
 
+.parallax-6 {
+    background-image: url(''); /* Placeholder for parallax image */
+}
+
 .hero-section,
 .categories-section,
 .featured-section,
