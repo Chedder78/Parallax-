@@ -11,6 +11,7 @@
     src: url('Melted Monster.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-color: green;
 }
 
 /* Common styles */
@@ -21,6 +22,7 @@ body {
     overflow-x: hidden;
     background-color: #000;
     color: #fff;
+    font-size: 20px;
 }
 
 header {
@@ -118,6 +120,10 @@ header .logo h1 {
 
 main {
     margin-top: 60px;
+}
+p {
+font-size: 20px;
+
 }
 
 .parallax {
@@ -235,6 +241,7 @@ main {
 footer {
     background: #000;
     color: #fff;
+    font-size: 20px; 
     text-align: center;
     padding: 20px 0;
 }
