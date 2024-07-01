@@ -16,19 +16,18 @@
 
 /* Common styles */
 body {
-    font-family: 'Dark Roast', sans-serif; /* Applying custom font to the body */
-    font-size: 30px;
+    font-family: 'Melted Monster', sans-serif; /* Applying custom font to the body */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     background-color: #000;
-    color: #fff;
+    font-color: green;
     
 }
 
 header {
     background: #000;
-    color: #fff;
+    font-color: green;
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -66,7 +65,7 @@ header .logo h1 {
     background: none;
     border: none;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -78,7 +77,7 @@ header .logo h1 {
     height: 100%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    color: #fff;
+    color: white;
     transition: left 0.3s ease;
     z-index: 1001;
     padding-top: 60px;
