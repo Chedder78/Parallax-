@@ -14,7 +14,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: #000;
-    color: #ffa500; /* Set to orange for readability */
+    color: #ffa500;
 }
 
 header {
@@ -51,17 +51,7 @@ header .logo h1 {
     margin: 0;
     font-size: 2.5rem;
     font-family: 'Melted Monster', sans-serif;
-    color: #00ff00; /* Solid green color for the header */
-    animation: glow 1.5s infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
-    }
-    to {
-        text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
-    }
+    color: #00ff00;
 }
 
 .menu-toggle {
@@ -191,8 +181,7 @@ main {
     margin-bottom: 40px;
     font-family: 'Melted Monster', sans-serif;
     font-size: 2rem;
-    color: #00ff00; /* Solid green color for the headers */
-    animation: glow 1.5s infinite alternate;
+    color: #00ff00;
 }
 
 .category-grid,
@@ -214,7 +203,7 @@ main {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 1.5rem;
-    color: #ffa500; /* Solid orange color for the category and product items */
+    color: #ffa500;
 }
 
 .category-item:hover,
