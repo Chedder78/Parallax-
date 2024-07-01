@@ -1,4 +1,3 @@
-/* Adding custom fonts */
 @font-face {
     font-family: 'Melted Monster';
     src: url('Melted Monster.ttf') format('truetype');
@@ -6,7 +5,6 @@
     font-style: normal;
 }
 
-/* Common styles */
 body {
     font-family: 'Melted Monster', sans-serif;
     font-size: 18px;
