@@ -3,62 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intricate Parallax E-commerce</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Epically Exquisite Product Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Intricate Parallax E-commerce</h1>
+        <h1>Shop Name</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
     </header>
-    <div class="parallax" id="section1">
-        <div class="content">
-            <h2>Welcome to CaliDef: the Bootloot Empire</h2>
-            <p>Discover our collection of vintage and modern GPK cards.</p>
-        </div>
-    </div>
-    <div class="parallax" id="section2">
-        <div class="content">
-            <h2>Featured Products</h2>
-            <div class="product">
-                <img src="tjLeFGMSSKq7BAtRQchAiw.png" alt="Product 1">
-                <p>Vintage Item 1</p>
-            </div>
-            <div class="product">
-                <img src="pop_cult_kids.jpg" alt="Product 2">
-                <p>Vintage Item 2</p>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1490725263030-1425f7b6f67d" alt="Product 3">
-                <p>Vintage Item 3</p>
-            </div>
-        </div>
-    </div>
-    <div class="parallax" id="section3">
-        <div class="content">
-            <h2>About Us</h2>
-            <p>Learn more about our journey and passion for vintage items.</p>
-        </div>
-    </div>
-    <div class="parallax" id="section4">
-        <div class="content">
-            <h2>New Arrivals</h2>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514" alt="Product 4">
-                <p>Vintage Item 4</p>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Product 5">
-                <p>Vintage Item 5</p>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Product 6">
-                <p>Vintage Item 6</p>
-            </div>
-        </div>
-    </div>
+
+    <div class="parallax" id="parallax1"></div>
+
+    <main>
+        <section class="product-section">
+            <aside class="filters">
+                <h2>Filters</h2>
+                <form>
+                    <label for="category">Category:</label>
+                    <select id="category" name="category">
+                        <option value="all">All</option>
+                        <option value="category1">Category 1</option>
+                        <option value="category2">Category 2</option>
+                    </select>
+
+                    <label for="price">Price Range:</label>
+                    <input type="range" id="price" name="price" min="0" max="1000">
+
+                    <label for="color">Color:</label>
+                    <select id="color" name="color">
+                        <option value="all">All</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+
+                    <button type="submit">Apply Filters</button>
+                </form>
+            </aside>
+        </section>
+
+        <div class="parallax" id="parallax2"></div>
+
+        <section class="product-section">
+            <article class="product-item">
+                <div class="product-images" onclick="openModal();currentSlide(1)">
+                    <img src="image1.jpg" alt="Product Image 1">
+                    <img src="image2.jpg" alt="Product Image 2">
+                    <img src="image3.jpg" alt="Product Image 3">
+                </div>
+                <div class="product-details">
+                    <h2>Product Name</h2>
+                    <p class="price">$100.00</p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+                    </p>
+                    <ul class="specifications">
+                        <li>Specification 1</li>
+                        <li>Specification 2</li>
+                        <li>Specification 3</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <div class="parallax" id="parallax3"></div>
+
+        <section class="product-section">
+            <article class="product-item">
+                <div class="product-images" onclick="openModal();currentSlide(2)">
+                    <img src="image4.jpg" alt="Product Image 4">
+                    <img src="image5.jpg" alt="Product Image 5">
+                    <img src="image6.jpg" alt="Product Image 6">
+                </div>
+                <div class="product-details">
+                    <h2>Product Name</h2>
+                    <p class="price">$150.00</p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+                    </p>
+                    <ul class="specifications">
+                        <li>Specification 1</li>
+                        <li>Specification 2</li>
+                        <li>Specification 3</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <div class="parallax" id="parallax4"></div>
+
+        <section class="product-section">
+            <article class="product-item">
+                <div class="product-images" onclick="openModal();currentSlide(3)">
+                    <img src="image7.jpg" alt="Product Image 7">
+                    <img src="image8.jpg" alt="Product Image 8">
+                    <img src="image9.jpg" alt="Product Image 9">
+                </div>
+                <div class="product-details">
+                    <h2>Product Name</h2>
+                    <p class="price">$200.00</p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+                    </p>
+                    <ul class="specifications">
+                        <li>Specification 1</li>
+                        <li>Specification 2</li>
+                        <li>Specification 3</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+
     <footer>
-        <p>© 2024 Intricate Parallax E-commerce</p>
+        <p>&copy; 2024 Shop Name. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <img src="image1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image5.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image6.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image7.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image8.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image9.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+        });
+
+        // Modal Image Gallery
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
 </body>
 </html>
