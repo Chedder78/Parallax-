@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Epically Exquisite Product Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -58,23 +58,12 @@
 
         <section class="product-section">
             <article class="product-item">
+                <h2>Product Name</h2>
                 <div class="product-images" onclick="openModal();currentSlide(1)">
-                    <img src="image1.jpg" alt="Product Image 1">
-                    <img src="image2.jpg" alt="Product Image 2">
-                    <img src="image3.jpg" alt="Product Image 3">
+                    <img src="image1.jpg" alt="Product Image 1" class="placeholder">
+                    <div class="ghost-label">Tap for more images</div>
                 </div>
-                <div class="product-details">
-                    <h2>Product Name</h2>
-                    <p class="price">$100.00</p>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
-                    </p>
-                    <ul class="specifications">
-                        <li>Specification 1</li>
-                        <li>Specification 2</li>
-                        <li>Specification 3</li>
-                    </ul>
-                </div>
+                <button class="product-details-btn" onclick="openProductDetails()">Product Details</button>
             </article>
         </section>
 
@@ -82,23 +71,12 @@
 
         <section class="product-section">
             <article class="product-item">
-                <div class="product-images" onclick="openModal();currentSlide(2)">
-                    <img src="image4.jpg" alt="Product Image 4">
-                    <img src="image5.jpg" alt="Product Image 5">
-                    <img src="image6.jpg" alt="Product Image 6">
+                <h2>Product Name</h2>
+                <div class="product-images" onclick="openModal();currentSlide(4)">
+                    <img src="image4.jpg" alt="Product Image 4" class="placeholder">
+                    <div class="ghost-label">Tap for more images</div>
                 </div>
-                <div class="product-details">
-                    <h2>Product Name</h2>
-                    <p class="price">$150.00</p>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
-                    </p>
-                    <ul class="specifications">
-                        <li>Specification 1</li>
-                        <li>Specification 2</li>
-                        <li>Specification 3</li>
-                    </ul>
-                </div>
+                <button class="product-details-btn" onclick="openProductDetails()">Product Details</button>
             </article>
         </section>
 
@@ -106,23 +84,12 @@
 
         <section class="product-section">
             <article class="product-item">
-                <div class="product-images" onclick="openModal();currentSlide(3)">
-                    <img src="image7.jpg" alt="Product Image 7">
-                    <img src="image8.jpg" alt="Product Image 8">
-                    <img src="image9.jpg" alt="Product Image 9">
+                <h2>Product Name</h2>
+                <div class="product-images" onclick="openModal();currentSlide(7)">
+                    <img src="image7.jpg" alt="Product Image 7" class="placeholder">
+                    <div class="ghost-label">Tap for more images</div>
                 </div>
-                <div class="product-details">
-                    <h2>Product Name</h2>
-                    <p class="price">$200.00</p>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
-                    </p>
-                    <ul class="specifications">
-                        <li>Specification 1</li>
-                        <li>Specification 2</li>
-                        <li>Specification 3</li>
-                    </ul>
-                </div>
+                <button class="product-details-btn" onclick="openProductDetails()">Product Details</button>
             </article>
         </section>
     </main>
@@ -202,13 +169,17 @@
         function showSlides(n) {
             let i;
             let slides = document.getElementsByClassName("mySlides");
-            let captionText = document.getElementById("caption");
             if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             slides[slideIndex-1].style.display = "block";
+        }
+
+        function openProductDetails() {
+            // Implement product details modal or redirect logic here
+            alert("Product Details button clicked");
         }
     </script>
 </body>
