@@ -3,187 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaliDef Collectables - GPK Cards & Merch</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Your destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and merch.">
+    <title>Epically Exquisite Product Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="20240629235044.png" alt="CaliDef Collectables Logo"><!-- Placeholder for logo image -->
-                <h1>CaliDef Collectables</h1>
+        <h1>Shop Name</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
-            <button id="menu-toggle" class="menu-toggle">☰</button>
-        </div>
+        </nav>
     </header>
 
-    <nav id="sliding-menu" class="sliding-menu">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#categories">Categories</a></li>
-            <li><a href="#featured">Featured</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
-            <li><a href="#account">Account</a></li>
-        </ul>
-    </nav>
-
-    <div id="overlay"></div>
+    <div class="parallax" id="parallax1"></div>
 
     <main>
-        <div class="parallax parallax-1"></div>
-
-        <section id="home" class="hero-section glassmorphism">
-            <div class="container">
-                <h2>Discover Vintage Garbage Pail Kids Cards</h2>
-                <p>Your ultimate destination for GPK cards and merchandise.</p>
-                <a href="#products" class="cta-button">Shop Now</a>
-            </div>
-        </section>
-
-        <div class="parallax parallax-2"></div>
-
-        <section id="categories" class="categories-section glassmorphism">
-            <div class="container">
-                <h2>Categories</h2>
-                <div class="category-grid">
-                    <div class="category-item">
-                        <img src="parallax-1.jpg" alt="GPK Series 1"><!-- Placeholder for category image -->
-                        <h3>Series 1</h3>
-                    </div>
-                    <div class="category-item">
-                        <img src="parallax-2.jpg" alt="GPK Series 2"><!-- Placeholder for category image -->
-                        <h3>Series 2</h3>
-                    </div>
-                    <div class="category-item">
-                        <img src="parallax-3.jpg" alt="GPK Rare Cards"><!-- Placeholder for category image -->
-                        <h3>Series 3</h3>
-                    </div>
-                    <div class="category-item">
-                        <img src="parallax-4.jpg" alt="GPK Merchandise"><!-- Placeholder for category image -->
-                        <h3>Series 4</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="parallax parallax-3"></div>
-
-        <section id="featured" class="featured-section glassmorphism">
-            <div class="container">
-                <h2>Featured Products</h2>
-                <div class="featured-grid">
-                    <div class="product-item">
-                        <img src="https://via.placeholder.com/250x400" alt="Product 1"><!-- Placeholder for featured product image -->
-                        <h3>GPK Product 1</h3>
-                        <p>$10.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <img src="https://via.placeholder.com/250x400" alt="Product 2"><!-- Placeholder for featured product image -->
-                        <h3>GPK Product 2</h3>
-                        <p>$15.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <img src="https://via.placeholder.com/250x400" alt="Product 3"><!-- Placeholder for featured product image -->
-                        <h3>GPK Product 3</h3>
-                        <p>$20.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <img src="https://via.placeholder.com/250x400" alt="Product 4"><!-- Placeholder for featured product image -->
-                        <h3>GPK Product 4</h3>
-                        <p>$25.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="parallax parallax-4"></div>
-
-        <section id="products" class="products-section glassmorphism">
-            <div class="container">
-                <h2>All Products</h2>
-                <div class="scroll-container">
-                    <div class="product-grid" id="all-products">
-                        <!-- Placeholder for all products. Dynamically add products here using JavaScript -->
-                        <div class="product-item">
-                            <img src="20240529_192159.jpg, 20240529_193316.jpg" alt="Product Placeholder"><!-- Placeholder for product image -->
-                            <h3>OS2 Complete Matte 
-                                Back Set</h3>
-                            <p>$295.00</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                        <div class="product-item">
-                            <img src="OS2_live_mike_complete_set.jpg" alt="Product Placeholder"><!-- Placeholder for product image -->
-                            <h3>OS2 Complete Live 
-                                Mike Set</h3>
-                            <p>$225.00</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                        <div class="product-item">
-                            <img src="https://via.placeholder.com/250x400" alt="Product Placeholder"><!-- Placeholder for product image -->
-                            <h3>OS3 Complete 
-                                Copyright
-                                No Copyright set</h3>
-                            <p>$180.00</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                        <div class="product-item">
-                            <img src="https://via.placeholder.com/250x400" alt="Product Placeholder"><!-- Placeholder for product image -->
-                         <h3>OS4 Complete Name 
-                             Variation Set</h3>
-                            <p>$85.00</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="parallax parallax-5"></div>
-
-        <section id="contact" class="contact-section glassmorphism">
-            <div class="container">
-                <h2>Contact Us</h2>
+        <section class="product-section">
+            <aside class="filters">
+                <h2>Filters</h2>
                 <form>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    
-                    <button type="submit">Submit</button>
+                    <label for="category">Category:</label>
+                    <select id="category" name="category">
+                        <option value="all">All</option>
+                        <option value="category1">Category 1</option>
+                        <option value="category2">Category 2</option>
+                    </select>
+
+                    <label for="price">Price Range:</label>
+                    <input type="range" id="price" name="price" min="0" max="1000">
+
+                    <label for="color">Color:</label>
+                    <select id="color" name="color">
+                        <option value="all">All</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+
+                    <button type="submit">Apply Filters</button>
                 </form>
-            </div>
+            </aside>
         </section>
 
-        <section id="cart" class="cart-section glassmorphism">
-            <div class="container">
-                <h2>Cart</h2>
-                <p>Your cart is currently empty.</p>
-            </div>
+        <div class="parallax" id="parallax2"></div>
+
+        <section class="product-section">
+            <article class="product-item">
+                <div class="product-images" onclick="openModal();currentSlide(1)">
+                    <img src="image1.jpg" alt="Product Image 1">
+                    <img src="image2.jpg" alt="Product Image 2">
+                    <img src="image3.jpg" alt="Product Image 3">
+                </div>
+                <div class="product-details">
+                    <h2>Product Name</h2>
+                    <p class="price">$100.00</p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+                    </p>
+                    <ul class="specifications">
+                        <li>Specification 1</li>
+                        <li>Specification 2</li>
+                        <li>Specification 3</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <div class="parallax" id="parallax3"></div>
+
+        <section class="product-section">
+            <article class="product-item">
+                <div class="product-images" onclick="openModal();currentSlide(4)">
+                    <img src="image4.jpg" alt="Product Image 4">
+                    <img src="image5.jpg" alt="Product Image 5">
+                    <img src="image6.jpg" alt="Product Image 6">
+                </div>
+                <div class="product-details">
+                    <h2>Product Name</h2>
+                    <p class="price">$150.00</p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+                    </p>
+                    <ul class="specifications">
+                        <li>Specification 1</li>
+                        <li>Specification 2</li>
+                        <li>Specification 3</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <div class="parallax" id="parallax4"></div>
+
+        <section class="product-section">
+            <article class="product-item">
+                <div class="product-images" onclick="openModal();currentSlide(7)">
+                    <img src="image7.jpg" alt="Product Image 7">
+                    <img src="image8.jpg" alt="Product Image 8">
+                    <img src="image9.jpg" alt="Product Image 9">
+                </div>
+                <div class="product-details">
+                    <h2>Product Name</h2>
+                    <p class="price">$200.00</p>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+                    </p>
+                    <ul class="specifications">
+                        <li>Specification 1</li>
+                        <li>Specification 2</li>
+                        <li>Specification 3</li>
+                    </ul>
+                </div>
+            </article>
         </section>
     </main>
 
     <footer>
-        <div class="container">  
-            <p>&copy; 2024 CaliDef Collectables. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-            </div>
-        </div>
+        <p>&copy; 2024 Shop Name. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <img src="image1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image5.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image6.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image7.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image8.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="image9.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+        });
+
+        // Modal Image Gallery
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
 </body>
 </html>
