@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -16,9 +17,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
@@ -34,6 +37,29 @@ header {
     cursor: pointer;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .sliding-menu {
     position: fixed;
     top: 0;
@@ -44,6 +70,7 @@ header {
     overflow-y: auto;
     transition: left 0.3s;
     z-index: 999;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .sliding-menu ul {
@@ -70,11 +97,50 @@ header {
     display: none;
 }
 
+.hero-section {
+    height: 400px;
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .cta-button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .parallax {
     height: 300px;
     background-attachment: fixed;
     background-size: cover;
     opacity: 0.8;
+    border: 2px solid #ff6600;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .parallax-1 { background-image: url('20240319194016.png'); }
@@ -84,39 +150,46 @@ header {
 .parallax-5 { background-image: url('20240514_233915.jpg'); }
 
 .glassmorphism {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     margin: 20px 0;
 }
 
-.hero-section {
-    text-align: center;
-    padding: 50px 0;
-    margin-top: 70px; /* Added margin to account for fixed header */
+.neumorphism {
+    background: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 8px 8px 16px #bebebe,
+                -8px -8px 16px #ffffff;
+    margin: 20px 0;
 }
 
-.cta-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.category-grid, .featured-grid, .product-grid {
+.grid-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.category-item, .product-item {
+.grid-item {
     flex: 1 1 calc(25% - 20px);
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.category-item img, .product-item img {
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -127,10 +200,43 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
 
 footer .social-links a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .grid-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+    }
+
+    .sliding-menu {
+        width: 200px;
+    }
 }
