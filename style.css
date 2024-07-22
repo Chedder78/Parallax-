@@ -72,11 +72,11 @@ header {
     background-size: cover;
 }
 
-.parallax-1 { background-image: url('parallax-1.jpg'); }
-.parallax-2 { background-image: url('parallax-2.jpg'); }
-.parallax-3 { background-image: url('parallax-3.jpg'); }
-.parallax-4 { background-image: url('parallax-4.jpg'); }
-.parallax-5 { background-image: url('parallax-5.jpg'); }
+.parallax-1 { background-image: url('20240319194016.png'); }
+.parallax-2 { background-image: url('20240627031001.png'); }
+.parallax-3 { background-image: url('IMG_20240306_224148_407.jpg'); }
+.parallax-4 { background-image: url('pop_cult_kids.jpg'); }
+.parallax-5 { background-image: url(''); }
 
 .glassmorphism {
     background: rgba(255, 255, 255, 0.7);
