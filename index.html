@@ -7,127 +7,183 @@
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="Your destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and merch.">
 </head>
+<body>
     <header>
-    <div class="logo">
-        <img src="logo.png" alt="Logo">
-    </div>
-    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="20240629235044.png" alt="CaliDef Collectables Logo"><!-- Placeholder for logo image -->
+                <h1>CaliDef Collectables</h1>
+            </div>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <nav id="sliding-menu" class="sliding-menu">
         <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-            <li><a href="#section4">Section 4</a></li>
-            <li><a href="#section5">Section 5</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+            <li><a href="#account">Account</a></li>
         </ul>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </nav>
-</header>
 
-<div class="sliding-menu" id="menu" role="navigation" aria-label="Main Menu">
-    <ul>
-        <li><a href="#section1">Section 1</a></li>
-        <li><a href="#section2">Section 2</a></li>
-        <li><a href="#section3">Section 3</a></li>
-        <li><a href="#section4">Section 4</a></li>
-        <li><a href="#section5">Section 5</a></li>
-    </ul>
-</div>
+    <div id="overlay"></div>
 
-<div id="overlay" onclick="toggleMenu()"></div>
+    <main>
+        <div class="parallax parallax-1"></div>
 
-<section class="hero-section">
-    <h1>Welcome to Our Website</h1>
-    <p>Your one-stop solution for amazing products</p>
-    <a href="#section1" class="cta-button">Get Started</a>
-</section>
+        <section id="home" class="hero-section glassmorphism">
+            <div class="container">
+                <h2>Discover Vintage Garbage Pail Kids Cards</h2>
+                <p>Your ultimate destination for GPK cards and merchandise.</p>
+                <a href="#products" class="cta-button">Shop Now</a>
+            </div>
+        </section>
 
-<div class="parallax parallax-1" id="section1"></div>
-<div class="glassmorphism">
-    <h2>Section 1 Content</h2>
-    <p>Some content for section 1.</p>
-</div>
+        <div class="parallax parallax-2"></div>
 
-<div class="parallax parallax-2" id="section2"></div>
-<div class="glassmorphism">
-    <h2>Section 2 Content</h2>
-    <p>Some content for section 2.</p>
-</div>
+        <section id="categories" class="categories-section glassmorphism">
+            <div class="container">
+                <h2>Categories</h2>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="parallax-1.jpg" alt="GPK Series 1"><!-- Placeholder for category image -->
+                        <h3>Series 1</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="parallax-2.jpg" alt="GPK Series 2"><!-- Placeholder for category image -->
+                        <h3>Series 2</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="parallax-3.jpg" alt="GPK Rare Cards"><!-- Placeholder for category image -->
+                        <h3>Series 3</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="parallax-4.jpg" alt="GPK Merchandise"><!-- Placeholder for category image -->
+                        <h3>Series 4</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="parallax parallax-3" id="section3"></div>
-<div class="neumorphism">
-    <h2>Section 3 Content</h2>
-    <p>Some content for section 3.</p>
-</div>
+        <div class="parallax parallax-3"></div>
 
-<div class="parallax parallax-4" id="section4"></div>
-<div class="glassmorphism">
-    <h2>Section 4 Content</h2>
-    <p>Some content for section 4.</p>
-</div>
+        <section id="featured" class="featured-section glassmorphism">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="featured-grid">
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 1"><!-- Placeholder for featured product image -->
+                        <h3>GPK Product 1</h3>
+                        <p>$10.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 2"><!-- Placeholder for featured product image -->
+                        <h3>GPK Product 2</h3>
+                        <p>$15.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 3"><!-- Placeholder for featured product image -->
+                        <h3>GPK Product 3</h3>
+                        <p>$20.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 4"><!-- Placeholder for featured product image -->
+                        <h3>GPK Product 4</h3>
+                        <p>$25.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="parallax parallax-5" id="section5"></div>
-<div class="neumorphism">
-    <h2>Section 5 Content</h2>
-    <p>Some content for section 5.</p>
-</div>
+        <div class="parallax parallax-4"></div>
 
-<div class="container">
-    <div class="grid-container">
-        <div class="grid-item">
-            <img src="image1.jpg" alt="Image 1">
-            <h3>Item 1</h3>
-            <p>Description for item 1.</p>
+        <section id="products" class="products-section glassmorphism">
+            <div class="container">
+                <h2>All Products</h2>
+                <div class="scroll-container">
+                    <div class="product-grid" id="all-products">
+                        <!-- Placeholder for all products. Dynamically add products here using JavaScript -->
+                        <div class="product-item">
+                            <img src="https://via.placeholder.com/250x400" alt="Product Placeholder"><!-- Placeholder for product image -->
+                            <h3>OS2 Complete Matte 
+                                Back Set</h3>
+                            <p>$295.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://via.placeholder.com/250x400" alt="Product Placeholder"><!-- Placeholder for product image -->
+                            <h3>OS2 Complete Live 
+                                Mike Set</h3>
+                            <p>$225.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://via.placeholder.com/250x400" alt="Product Placeholder"><!-- Placeholder for product image -->
+                            <h3>OS3 Complete 
+                                Copyright
+                                No Copyright set</h3>
+                            <p>$180.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <div class="product-item">
+                            <img src="https://via.placeholder.com/250x400" alt="Product Placeholder"><!-- Placeholder for product image -->
+                         <h3>OS4 Complete Name 
+                             Variation Set</h3>
+                            <p>$85.00</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="parallax parallax-5"></div>
+
+        <section id="contact" class="contact-section glassmorphism">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="cart" class="cart-section glassmorphism">
+            <div class="container">
+                <h2>Cart</h2>
+                <p>Your cart is currently empty.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">  
+            <p>&copy; 2024 CaliDef Collectables. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
         </div>
-        <div class="grid-item">
-            <img src="image2.jpg" alt="Image 2">
-            <h3>Item 2</h3>
-            <p>Description for item 2.</p>
-        </div>
-        <div class="grid-item">
-            <img src="image3.jpg" alt="Image 3">
-            <h3>Item 3</h3>
-            <p>Description for item 3.</p>
-        </div>
-        <div class="grid-item">
-            <img src="image4.jpg" alt="Image 4">
-            <h3>Item 4</h3>
-            <p>Description for item 4.</p>
-        </div>
-    </div>
-</div>
+    </footer>
 
-<footer>
-    <div class="social-links">
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-    </div>
-    <p>&copy; 2024 Your Website</p>
-</footer>
-
-<a href="#top" id="back-to-top">↑</a>
-
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('menu');
-        const overlay = document.getElementById('overlay');
-        if (menu.style.left === '0px') {
-            menu.style.left = '-250px';
-            overlay.style.display = 'none';
-        } else {
-            menu.style.left = '0px';
-            overlay.style.display = 'block';
-        }
-    }
-
-    // Show back to top button
-    window.onscroll = function() {
-        const backToTop = document.getElementById('back-to-top');
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            backToTop.style.display = 'block';
-        } else {
-            backToTop.style.display = 'none';
-        }
-    };
-</script>
-
+    <script src="script.js"></script>
+</body>
+</html>
