@@ -182,7 +182,7 @@ header .logo h1:hover {
     transition: background 0.3s ease-in-out;
 }
 
-.parallax-1 { background-image: url(Os1 character cover.png); }
+.parallax-1 { background-image: url('Os1 character cover.png'); }
 .parallax-2 { background-image: url('20240627031001.png'); }
 .parallax-3 { background-image: url('IMG_20240306_224148_407.jpg'); }
 .parallax-4 { background-image: url('20240319194016.png'); }
