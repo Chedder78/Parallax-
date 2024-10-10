@@ -359,3 +359,23 @@ footer p {
         font-size: 1.5rem;
     }
 }
+
+.scroll-animate {
+    opacity: 0; /* Start as invisible */
+    transform: translateY(100px); /* Start slightly below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.scroll-animate.in-view {
+    opacity: 1; /* Become visible */
+    transform: translateY(0); /* Move to its original position */
+}
+
+/* Example styles for glassmorphism */
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur the background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Some padding */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
