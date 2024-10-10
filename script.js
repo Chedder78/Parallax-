@@ -74,3 +74,21 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(parallaxElement);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const scrollElements = document.querySelectorAll('.scroll-animate');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view'); // Add the in-view class
+                observer.unobserve(entry.target); // Stop observing after the animation
+            }
+        });
+    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+    scrollElements.forEach(el => {
+        observer.observe(el); // Observe each scroll-animate element
+    });
+});
+
