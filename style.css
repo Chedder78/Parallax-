@@ -224,6 +224,65 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
+.product-card {
+    background: #2c3e50; /* Dark background for card */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    text-align: center; /* Centered text */
+    position: relative; /* Relative positioning for layering */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.product-series {
+    font-size: 1.2rem; /* Font size for series name */
+    color: #f39c12; /* Orange color for series */
+    margin-bottom: 10px; /* Margin below series name */
+}
+
+.product-image {
+    width: 100%; /* Full width image */
+    border-radius: 10px; /* Rounded corners for image */
+    margin-bottom: 15px; /* Margin below image */
+}
+
+.product-price {
+    font-size: 1.5rem; /* Price font size */
+    font-weight: 600; /* Bold font for price */
+    margin-bottom: 10px; /* Margin below price */
+    color: #e67e22; /* Price color */
+}
+
+.product-description {
+    font-size: 1rem; /* Font size for description */
+    color: rgba(255, 255, 255, 0.85); /* Light color for description */
+    margin-bottom: 20px; /* Margin below description */
+}
+
+/* BUTTON STYLING */
+.product-button {
+    display: inline-block; /* Inline block for button */
+    background: linear-gradient(to right, #8e44ad, #3498db); /* Gradient background */
+    color: #fff; /* Button text color */
+    padding: 15px 30px; /* Padding for button */
+    border-radius: 30px; /* Rounded corners for button */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 1.1rem; /* Font size for button */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow for button */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Button transition */
+    margin-top: 10px; /* Space above the button */
+}
+
+.product-button:hover {
+    transform: translateY(-5px); /* Lift button on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+    background: linear-gradient(to right, #3498db, #8e44ad); /* Gradient change on hover */
+}
+
 /* --------------- CONTACT FORM STYLING --------------- */
 form input, form textarea {
     width: 100%;
