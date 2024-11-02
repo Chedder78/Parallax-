@@ -81,6 +81,72 @@ header {
     color: #00ff00;
 }
 
+.menu-container {
+    position: fixed;
+    top: 50%; /* Center the menu vertically */
+    left: -300px; /* Hide menu off-screen initially */
+    width: 300px; /* Width of the menu */
+    height: 300px; /* Height to make it circular */
+    background: linear-gradient(180deg, #ff0000, #f1c40f); /* F1 theme gradient */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    transition: left 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    transform-origin: left center; /* Set the origin for rotation */
+    border-radius: 50%; /* Make the menu circular */
+    z-index: 1000; /* Ensure it appears above other elements */
+    display: flex; /* Flexbox to center items */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+#menu-container.open {
+    left: 0; /* Slide into the visible area */
+    transform: rotate(0deg); /* Rotate into view */
+}
+
+#menu-container:not(.open) {
+    transform: rotate(-90deg); /* Rotate out of view when closed */
+}
+
+#menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Position button to avoid menu */
+    z-index: 1001; /* Ensure button is above the menu */
+    padding: 10px 20px;
+    background-color: #2980b9; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#menu-button:hover {
+    background-color: #3498db; /* Lighter blue on hover */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center align text */
+}
+
+.menu li {
+    margin: 15px 0;
+    color: #ffffff; /* White text for contrast */
+    font-size: 20px; /* Increase font size for better readability */
+}
+
+.menu li a {
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+.menu li a:hover {
+    color: #f1c40f; /* Highlight on hover */
+}
+
 .parallax {
     height: 100vh;
     background-size: cover;
