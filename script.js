@@ -92,3 +92,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.getElementById("menu-button").addEventListener("click", function() {
+    const menuContainer = document.getElementById("menu-container");
+    menuContainer.classList.toggle("open"); // Toggle the open class
+});
+
+// Optional: Close the menu when a link is clicked
+const menuLinks = document.querySelectorAll('.menu ul li a');
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById("menu-container").classList.remove("open"); // Close menu on link click
+    });
+});
