@@ -104,3 +104,22 @@ menuLinks.forEach(link => {
         document.getElementById("menu-container").classList.remove("open"); // Close menu on link click
     });
 });
+
+window.addEventListener('scroll', function() {
+    const scrolled = window.scrollY;
+    
+    // Adjust speed for each parallax background
+    const parallaxBg1 = document.querySelector('.parallax-bg-1');
+    const parallaxBg2 = document.querySelector('.parallax-bg-2');
+
+    // Set background position to create parallax effect
+    parallaxBg1.style.transform = `translateY(${scrolled * 0.5}px)`; // Background moves slower
+    parallaxBg2.style.transform = `translateY(${scrolled * 0.3}px)`; // Background moves slower than the first
+
+    // Optionally, adjust the content speed (if desired)
+    const parallaxContent = document.querySelectorAll('.parallax-content');
+    parallaxContent.forEach(content => {
+        content.style.transform = `translateY(${scrolled * 0.2}px)`; // Content moves faster
+    });
+});
+
