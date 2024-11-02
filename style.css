@@ -168,6 +168,46 @@ header {
     background-image: url('IMG_20240306_224148_407.jpg');
 }
 
+.parallax {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Full height */
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    will-change: transform; /* Performance optimization */
+}
+
+.parallax-content {
+    position: relative; /* Positioning for the floating content */
+    z-index: 2; /* Ensure it's above the background */
+    padding: 60px 20px; /* Space around the content */
+    color: #fff; /* Text color */
+}
+
+/* Example parallax layers with different speeds */
+.parallax-bg-1 {
+    background-image: url('image1.jpg'); /* Replace with your image */
+    transform: translateZ(-1px) scale(2); /* Move back and scale */
+}
+
+.parallax-bg-2 {
+    background-image: url('image2.jpg'); /* Replace with your image */
+    transform: translateZ(-0.5px) scale(1.5); /* Less back and scale */
+}
+
+.parallax-bg-3 {
+    background-image: url('image3.jpg'); /* Replace with your image */
+    transform: translateZ(-0.5px) scale(1.0); /* Less back and scale */
+}
+
 .hero-content {
     display: flex;
     flex-direction: column;
