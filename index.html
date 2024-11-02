@@ -14,56 +14,31 @@
 
     <!-- Start Header -->
     <header class="fixed-header">
-      <body>
-    <!-- Start Menu Container -->
-    <div class="menu-container" id="menu-container">
-        <div class="menu" id="menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#original-series">Original Series</a></li>
-                <li><a href="#featured">Featured</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <div class="menu-container" id="menu-container">
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#original-series">Original Series</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <button id="menu-button">Open Menu</button>
-    <!-- End Menu Container -->
-
-    <!-- Remaining content... -->
-
-        </div>
+        <button id="menu-button">Open Menu</button>
     </header>
     <!-- End Header -->
 
     <!-- Start Parallax Section 1 -->
-    <div id="home" class="parallax parallax-bg-1">
-        <div class="hero-content glassmorphism">
+    <div id="home" class="parallax">
+        <div class="parallax-bg parallax-bg-1"></div>
+        <div class="overlay"></div> <!-- Dark overlay -->
+        <div class="parallax-content glassmorphism">
             <h2 class="hero-title neon-text">Discover Vintage Garbage Pail Kids Cards</h2>
             <p class="hero-subtitle">Your ultimate destination for rare and iconic GPK collectables.</p>
             <a href="#original-series" class="cta-button neon-highlight">Shop Now</a>
         </div>
     </div>
     <!-- End Parallax Section 1 -->
-
-    <!-- Parallax Section 1 -->
-<div class="parallax" id="home">
-    <div class="parallax-bg parallax-bg-1"></div>
-    <div class="parallax-content glassmorphism">
-        <h2 class="hero-title neon-text">Discover Vintage Garbage Pail Kids Cards</h2>
-        <p class="hero-subtitle">Your ultimate destination for rare and iconic GPK collectables.</p>
-        <a href="#original-series" class="cta-button neon-highlight">Shop Now</a>
-    </div>
-</div>
-
-<!-- Parallax Section 2 -->
-<div class="parallax" id="featured">
-    <div class="parallax-bg parallax-bg-2"></div>
-    <div class="parallax-content glassmorphism">
-        <h2 class="section-title neon-box">Featured Products</h2>
-        <!-- Featured products here -->
-    </div>
-</div>
-
 
     <!-- Start Original Series Section -->
     <section id="original-series" class="section glassmorphism scroll-animate">
@@ -91,12 +66,9 @@
     </section>
     <!-- End Original Series Section -->
 
-    <!-- Start Parallax Section 2 -->
-    <div class="parallax parallax-bg-2"></div>
-    <!-- End Parallax Section 2 -->
-
     <!-- Start Featured Products Section -->
     <section id="featured" class="section glassmorphism scroll-animate">
+        <div class="parallax-bg parallax-bg-2"></div>
         <div class="container">
             <h2 class="section-title neon-box">Featured Products</h2>
             <div class="grid">
@@ -128,10 +100,6 @@
         </div>
     </section>
     <!-- End Featured Products Section -->
-
-    <!-- Start Parallax Section 3 -->
-    <div class="parallax parallax-bg-3"></div>
-    <!-- End Parallax Section 3 -->
 
     <!-- Start Contact Section -->
     <section id="contact" class="section glassmorphism scroll-animate">
