@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    background: #000;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 10px 0;
     position: fixed;
@@ -26,7 +26,7 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-header .container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,17 +35,17 @@ header .container {
     padding: 0 20px;
 }
 
-header .logo {
+.logo {
     display: flex;
     align-items: center;
 }
 
-header .logo img {
+.logo img {
     height: 50px;
     margin-right: 10px;
 }
 
-header .logo h1 {
+.site-title {
     margin: 0;
     font-size: 2.5rem;
     color: #00ff00;
@@ -59,88 +59,83 @@ header .logo h1 {
     cursor: pointer;
 }
 
-.sliding-menu {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    color: #fff;
-    transition: left 0.3s ease;
-    z-index: 1001;
-    padding-top: 60px;
+.main-nav {
+    position: relative;
 }
 
-.sliding-menu ul {
+.nav-list {
+    display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.sliding-menu ul li {
-    padding: 10px 20px;
-}
-
-.sliding-menu ul li a {
+.nav-list .nav-link {
     color: #fff;
     text-decoration: none;
-    display: block;
-    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
 }
 
-.sliding-menu ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-}
-
-.show-menu {
-    left: 0;
-}
-
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: none;
-}
-
-main {
-    margin-top: 60px;
+.nav-list .nav-link:hover {
+    color: #00ff00;
 }
 
 .parallax {
-    height: 350px;
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     position: relative;
     z-index: 1;
     overflow: hidden;
 }
 
-.parallax-1 {
+.parallax-bg-1 {
     background-image: url('tjLeFGMSSKq7BAtRQchAiw.png');
 }
 
-.parallax-2 {
+.parallax-bg-2 {
     background-image: url('20240627031001.png');
 }
 
-.parallax-3 {
+.parallax-bg-3 {
     background-image: url('IMG_20240306_224148_407.jpg');
 }
 
-.parallax-4 {
-    background-image: url('20240319194016.png');
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
 }
 
-.parallax-5 {
-    background-image: url('pop_cult_kids.jpg');
+.hero-title {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #c0392b;
 }
 
 .section {
@@ -155,27 +150,20 @@ main {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.section.selected {
-    box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.5);
-}
-
-.section h2 {
+.section-title {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2rem;
     color: #00ff00;
 }
 
-.category-grid,
-.featured-grid,
-.product-grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.category-item,
-.product-item {
+.grid-item {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 20px;
@@ -184,25 +172,22 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-size: 1.5rem;
-    color: #ffa500;
 }
 
-.category-item:hover,
-.product-item:hover {
+.grid-item:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.category-item img,
-.product-item img {
+.grid-img {
     width: 100%;
     height: auto;
-    max-width: 250px;
-    max-height: 400px;
-    object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #ffa500;
 }
 
 .add-to-cart {
@@ -221,45 +206,65 @@ main {
     background: #c0392b;
 }
 
-.scroll-container {
-    overflow-x: auto;
-    white-space: nowrap;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.product-grid {
-    display: inline-flex;
-    gap: 20px;
+.form-label {
+    margin: 10px 0 5px;
 }
 
-footer {
-    background: #000;
+.form-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     padding: 20px 0;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
-footer .social-links a {
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-footer .social-links a:hover {
+.social-links a:hover {
     color: #00ff00;
 }
 
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.scroll-animate {
+    animation: fadeIn 1s ease;
+}
 
-    header nav ul {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    header .header-container {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
     }
 
     .parallax {
@@ -270,8 +275,7 @@ footer .social-links a:hover {
         padding: 40px 10px;
     }
 
-    .category-item,
-    .product-item {
+    .grid-item {
         font-size: 1.2rem;
     }
 }
