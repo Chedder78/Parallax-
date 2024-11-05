@@ -1,86 +1,53 @@
-/* Font Import */
-@font-face {
-    font-family: 'Melted Monster';
-    src: url('Melted Monster.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Base Styling */
+/* Common styles */
 body {
-    font-family: 'Melted Monster', sans-serif;
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #ffa500;
     overflow-x: hidden;
 }
 
-/* Header with Centered Logo */
 header {
-    background: rgba(0, 0, 0, 0.85);
+    background: #333;
     color: #fff;
-    padding: 15px 0;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    text-align: center;
 }
 
 header .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-}
-
-header .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header .logo img {
-    height: 80px;
-    margin-bottom: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header .logo h1 {
-    font-size: 3.5rem;
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    margin: 0;
 }
 
 .menu-toggle {
     background: none;
     border: none;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    transition: color 0.3s ease;
 }
 
-.menu-toggle:hover {
-    color: #00ff00;
-}
-
-/* Sliding Menu */
 .sliding-menu {
     position: fixed;
     top: 0;
-    left: -300px;
-    width: 300px;
+    left: -250px;
+    width: 250px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(15px);
+    background: #333;
     color: #fff;
-    transition: left 0.4s ease;
+    transition: left 0.3s ease;
     z-index: 1001;
-    padding-top: 70px;
+    padding-top: 60px;
 }
 
 .sliding-menu ul {
@@ -89,252 +56,184 @@ header .logo h1 {
 }
 
 .sliding-menu ul li {
-    padding: 15px 25px;
-    transition: background 0.3s ease;
+    padding: 10px 20px;
 }
 
 .sliding-menu ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.4rem;
     display: block;
-    transition: color 0.3s ease;
 }
 
 .sliding-menu ul li a:hover {
-    background: rgba(0, 255, 255, 0.2);
-    color: #00ffff;
-    border-radius: 10px;
+    background: #444;
 }
 
-/* Menu open animation */
 .show-menu {
     left: 0;
 }
 
-/* Neon Highlight for selected items */
-.selected {
-    position: relative;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.selected::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    border-radius: inherit;
-    border: 3px solid transparent;
-    background: linear-gradient(45deg, purple, transparent);
-    background-size: 200% 200%;
-    animation: neonHighlight 3s ease infinite;
-}
-
-@keyframes neonHighlight {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Overlay */
 #overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: none;
-    transition: opacity 0.3s ease;
 }
 
-#overlay.active {
-    display: block;
-    opacity: 1;
+main {
+    margin-top: 60px;
 }
 
-/* Parallax Effect */
 .parallax {
-    height: 100vh;
-    background-size: cover;
+    min-height: 350px;
     background-attachment: fixed;
+    background-size: cover;
     background-position: center;
+}
+
+.parallax-1 {
+    background-image: url('tjLeFGMSSKq7BAtRQchAiw.png');
+}
+
+.parallax-2 {
+    background-image: url('Os1 character cover.png');
+}
+
+.parallax-3 {
+    background-image: url('IMG_20240306_224148_407.jpg');
+}
+
+.parallax-4 {
+    background-image: url('20240319194016.png');
+}
+
+.parallax-5 {
+    background-image: url('20220202_223816.jpg');
+}
+
+.hero-section {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
     position: relative;
     z-index: 1;
-    transition: background 0.3s ease-in-out;
 }
 
-.parallax-1 { background-image: url('tjLeFGMSSKq7BAtRQchAiw.png'); }
-.parallax-2 { background-image: url('20240627031001.png'); }
-.parallax-3 { background-image: url('IMG_20240306_224148_407.jpg'); }
-.parallax-4 { background-image: url('20240319194016.png'); }
-.parallax-5 { background-image: url('pop_cult_kids.jpg'); }
+.hero-section .cta-button {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
 
-/* Sections with Glassmorphism */
-.hero-section,
 .categories-section,
 .featured-section,
 .products-section,
-.contact-section {
-    padding: 80px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border-radius: 15px;
+.contact-section,
+.cart-section {
+    padding: 60px 20px;
+    background: #f4f4f4;
     position: relative;
-    z-index: 2;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 1;
 }
 
-.hero-section.selected,
-.categories-section.selected,
-.featured-section.selected,
-.products-section.selected,
-.contact-section.selected {
-    box-shadow: 0 0 30px 15px rgba(128, 0, 255, 0.8);
-}
-
-/* Section Headings */
-.hero-section h2,
 .categories-section h2,
 .featured-section h2,
 .products-section h2,
-.contact-section h2 {
+.contact-section h2,
+.cart-section h2 {
     text-align: center;
-    margin-bottom: 50px;
-    font-family: 'Melted Monster', sans-serif;
-    font-size: 2.5rem;
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
-    letter-spacing: 2px;
-    transition: color 0.3s ease;
+    margin-bottom: 40px;
 }
 
-.hero-section h2:hover,
-.categories-section h2:hover,
-.featured-section h2:hover,
-.products-section h2:hover,
-.contact-section h2:hover {
-    color: #00ffff;
-}
-
-/* Grid Layouts */
 .category-grid,
 .featured-grid,
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* Category and Product Item */
 .category-item,
 .product-item {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
-    padding: 25px;
+    background: #fff;
+    padding: 20px;
     text-align: center;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    font-size: 1.6rem;
-    color: #ffa500;
-}
-
-.category-item:hover,
-.product-item:hover {
-    transform: scale(1.08);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .category-item img,
 .product-item img {
-    width: 100%;
-    max-width: 260px;
-    max-height: 400px;
+    width: 250px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
-.category-item:hover img,
-.product-item:hover img {
-    transform: scale(1.05);
-}
-
-/* Add to Cart Button (general button styling kept for other uses) */
 .add-to-cart {
-    background: #ff6347;
+    background: #e74c3c;
     color: #fff;
     border: none;
-    padding: 12px 25px;
-    font-size: 1.2rem;
+    padding: 10px 20px;
+    font-size: 1rem;
     cursor: pointer;
-    margin-top: 15px;
-    border-radius: 8px;
-    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
-.add-to-cart:hover {
-    background: #e74c3c;
-    transform: translateY(-3px);
+.scroll-container {
+    overflow-x: scroll;
+    white-space: nowrap;
 }
 
-/* Footer */
+.product-grid {
+    display: inline-flex;
+    gap: 20px;
+}
+
 footer {
-    background: #000;
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 25px 0;
-    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.8);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
 }
 
 footer .social-links a {
     color: #fff;
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    font-size: 1.4rem;
-    transition: color 0.3s ease;
 }
 
 footer .social-links a:hover {
-    color: #00ff00;
+    text-decoration: underline;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    .parallax {
-        background-attachment: scroll;
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
-    .sliding-menu {
-        width: 100%;
-    }
-
-    .category-grid,
-    .featured-grid,
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
+    .header-extras {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
     }
 }
