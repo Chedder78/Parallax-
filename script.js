@@ -122,4 +122,21 @@ window.addEventListener('scroll', function() {
         content.style.transform = `translateY(${scrolled * 0.2}px)`; // Content moves faster
     });
 });
+// Dark Mode Toggle
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('header').classList.toggle('dark-mode');
+});
 
+// Scroll-triggered animations (reveal sections)
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 50) {
+            section.classList.add('in-view');
+        }
+    });
+});
