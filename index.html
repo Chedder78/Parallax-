@@ -9,6 +9,20 @@
     <title>CaliDef Collectables</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- PWA Manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Register the Service Worker -->
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful: ', registration);
+        }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    }
+</script>
+
 </head>
 <body>
 
