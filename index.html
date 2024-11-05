@@ -9,35 +9,33 @@
     <title>CaliDef Collectables</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
     <!-- PWA Manifest -->
-<link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.json">
 
-<!-- Register the Service Worker -->
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').then(function(registration) {
-            console.log('ServiceWorker registration successful: ', registration);
-        }, function(err) {
-            console.log('ServiceWorker registration failed: ', err);
-        });
-    }
-</script>
-
+    <!-- Register the Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+                console.log('ServiceWorker registration successful: ', registration);
+            }).catch(function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        }
+    </script>
 </head>
 <body>
-
     <!-- Start Header -->
     <header class="fixed-header">
-        <div class="menu-container" id="menu-container">
-            <div class="menu" id="menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#original-series">Original Series</a></li>
-                    <li><a href="#featured">Featured</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+        <nav class="menu-container" id="menu-container">
+            <ul class="menu" id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#original-series">Original Series</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
         <button id="menu-button">Open Menu</button>
     </header>
     <!-- End Header -->
@@ -45,7 +43,7 @@
     <!-- Start Parallax Section 1 -->
     <div id="home" class="parallax">
         <div class="parallax-bg parallax-bg-1"></div>
-        <div class="overlay"></div> <!-- Dark overlay -->
+        <div class="overlay"></div>
         <div class="parallax-content glassmorphism">
             <h2 class="hero-title neon-text">Discover Vintage Garbage Pail Kids Cards</h2>
             <p class="hero-subtitle">Your ultimate destination for rare and iconic GPK collectables.</p>
@@ -78,12 +76,12 @@
             </div>
         </div>
     </section>
-  
     <!-- End Original Series Section -->
+
     <section id="product-details" class="section">
-    <h2>Check Out Our Rare GPK Cards</h2>
-    <canvas id="gpk-3d-viewer"></canvas>
-</section>
+        <h2>Check Out Our Rare GPK Cards</h2>
+        <canvas id="gpk-3d-viewer"></canvas>
+    </section>
 
     <!-- Start Featured Products Section -->
     <section id="featured" class="section glassmorphism scroll-animate">
@@ -119,24 +117,25 @@
         </div>
     </section>
     <!-- End Featured Products Section -->
-  <section id="recommended-products" class="section minimalist">
-            <h2>Recommended for You</h2>
-            <div class="product-grid">
-                  <!-- Dynamic Products will be injected here based on history -->
-        <div id="personalized-cards"></div>
-    </div>
-      <div class="product-item">
-          <img src="product1.jpg" alt="Product 1">
-             <p>Product 1</p>
-              <button class="view-3d">View in 3D</button>
-                </div>
-                  <div class="product-item">
-                    <img src="product2.jpg" alt="Product 2">
-             <p>Product 2</p>
-              <button class="view-3d">View in 3D</button>
-                </div>
+
+    <!-- Start Recommended Products Section -->
+    <section id="recommended-products" class="section minimalist">
+        <h2>Recommended for You</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="product1.jpg" alt="Product 1">
+                <p>Product 1</p>
+                <button class="view-3d">View in 3D</button>
             </div>
-        </section>
+            <div class="product-item">
+                <img src="product2.jpg" alt="Product 2">
+                <p>Product 2</p>
+                <button class="view-3d">View in 3D</button>
+            </div>
+        </div>
+    </section>
+    <!-- End Recommended Products Section -->
+
     <!-- Start Contact Section -->
     <section id="contact" class="section glassmorphism scroll-animate">
         <div class="container">
