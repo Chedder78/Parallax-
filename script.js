@@ -140,3 +140,22 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+// JavaScript to fetch local storage and recommend similar products
+const userRecentlyViewed = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
+const recommendedContainer = document.getElementById('personalized-cards');
+
+// Example cards data
+const allProducts = [
+    { name: "GPK Series 1", img: "gpk1.jpg" },
+    { name: "GPK Series 2", img: "gpk2.jpg" },
+    // More products
+];
+
+// Dynamically display recently viewed items
+userRecentlyViewed.forEach(product => {
+    let productItem = `<div class="product-item">
+                        <img src="${product.img}" alt="${product.name}">
+                        <p>${product.name}</p>
+                       </div>`;
+    recommendedContainer.innerHTML += productItem;
+});
