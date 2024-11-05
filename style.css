@@ -244,6 +244,17 @@ header {
     background: #c0392b;
 }
 
+/* Hover effects for product items */
+.product-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
 .section {
     padding: 60px 20px;
     background: rgba(255, 255, 255, 0.1);
