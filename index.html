@@ -3,173 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CaliDef Collectables - Your ultimate destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and exclusive GPK merch.">
-    <meta name="keywords" content="GPK, Garbage Pail Kids, Vintage Cards, Collectables, CaliDef, Rare Collectibles">
-    <meta name="author" content="CaliDef Collectables">
-    <title>CaliDef Collectables</title>
+    <title>CaliDef Collectables - GPK Cards & Merch</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json">
-
-    <!-- Register the Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-                console.log('ServiceWorker registration successful: ', registration);
-            }).catch(function(err) {
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        }
-    </script>
+    <meta name="description" content="Your destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and merch.">
 </head>
 <body>
-    <!-- Start Header -->
-    <header class="fixed-header">
-        <nav class="menu-container" id="menu-container">
-            <ul class="menu" id="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#original-series">Original Series</a></li>
-                <li><a href="#featured">Featured</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <button id="menu-button">Open Menu</button>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="20240629235044.png" alt="CaliDef Collectables Logo" loading="lazy">
+                <h1>CaliDef Collectables</h1>
+            </div>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+        </div>
     </header>
-    <!-- End Header -->
 
-    <!-- Start Parallax Section 1 -->
-    <div id="home" class="parallax">
-        <div class="parallax-bg parallax-bg-1"></div>
-        <div class="overlay"></div>
-        <div class="parallax-content glassmorphism">
-            <h2 class="hero-title neon-text">Discover Vintage Garbage Pail Kids Cards</h2>
-            <p class="hero-subtitle">Your ultimate destination for rare and iconic GPK collectables.</p>
-            <a href="#original-series" class="cta-button neon-highlight">Shop Now</a>
-        </div>
-    </div>
-    <!-- End Parallax Section 1 -->
+    <nav id="sliding-menu" class="sliding-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#account">Account</a></li>
+        </ul>
+    </nav>
 
-    <!-- Start Original Series Section -->
-    <section id="original-series" class="section glassmorphism scroll-animate">
+    <div id="overlay"></div>
+
+    <main>
+        <div class="parallax parallax-1"></div>
+
+        <section id="home" class="hero-section glassmorphism">
+            <div class="container">
+                <h2>Discover Vintage Garbage Pail Kids Cards</h2>
+                <p>Your ultimate destination for GPK cards and merchandise.</p>
+                <a href="#products" class="cta-button neon-highlight">Shop Now</a>
+            </div>
+        </section>
+
+        <div class="parallax parallax-2"></div>
+
+        <section id="categories" class="categories-section glassmorphism">
+            <div class="container">
+                <h2>Categories</h2>
+                <div class="category-grid">
+                    <div class="category-item neon-box">
+                        <img src="parallax-1.jpg" alt="GPK Series 1" loading="lazy">
+                        <h3>Series 1</h3>
+                    </div>
+                    <div class="category-item neon-box">
+                        <img src="parallax-2.jpg" alt="GPK Series 2" loading="lazy">
+                        <h3>Series 2</h3>
+                    </div>
+                    <div class="category-item neon-box">
+                        <img src="parallax-3.jpg" alt="GPK Rare Cards" loading="lazy">
+                        <h3>Series 3</h3>
+                    </div>
+                    <div class="category-item neon-box">
+                        <img src="parallax-4.jpg" alt="GPK Merchandise" loading="lazy">
+                        <h3>Series 4</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="parallax parallax-3"></div>
+
+        <section id="featured" class="featured-section glassmorphism">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="featured-grid">
+                    <div class="product-item neon-box">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 1" loading="lazy">
+                        <h3>GPK Product 1</h3>
+                        <p>$10.00</p>
+                        <button class="add-to-cart neon-highlight">Add to Cart</button>
+                    </div>
+                    <div class="product-item neon-box">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 2" loading="lazy">
+                        <h3>GPK Product 2</h3>
+                        <p>$15.00</p>
+                        <button class="add-to-cart neon-highlight">Add to Cart</button>
+                    </div>
+                    <div class="product-item neon-box">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 3" loading="lazy">
+                        <h3>GPK Product 3</h3>
+                        <p>$20.00</p>
+                        <button class="add-to-cart neon-highlight">Add to Cart</button>
+                    </div>
+                    <div class="product-item neon-box">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 4" loading="lazy">
+                        <h3>GPK Product 4</h3>
+                        <p>$25.00</p>
+                        <button class="add-to-cart neon-highlight">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="parallax parallax-4"></div>
+
+        <section id="contact" class="contact-section glassmorphism">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit" class="neon-highlight">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <h2 class="section-title neon-box">Original Series</h2>
-            <div class="grid">
-                <div class="grid-item neon-box">
-                    <img src="parallax-1.jpg" alt="GPK Series 1" class="grid-img" loading="lazy">
-                    <h3 class="grid-title">Series 1</h3>
-                </div>
-                <div class="grid-item neon-box">
-                    <img src="parallax-2.jpg" alt="GPK Series 2" class="grid-img" loading="lazy">
-                    <h3 class="grid-title">Series 2</h3>
-                </div>
-                <div class="grid-item neon-box">
-                    <img src="parallax-3.jpg" alt="GPK Rare Cards" class="grid-img" loading="lazy">
-                    <h3 class="grid-title">Series 3</h3>
-                </div>
-                <div class="grid-item neon-box">
-                    <img src="parallax-4.jpg" alt="GPK Merchandise" class="grid-img" loading="lazy">
-                    <h3 class="grid-title">Series 4</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Original Series Section -->
-
-    <section id="product-details" class="section">
-        <h2>Check Out Our Rare GPK Cards</h2>
-        <canvas id="gpk-3d-viewer"></canvas>
-    </section>
-
-    <!-- Start Featured Products Section -->
-    <section id="featured" class="section glassmorphism scroll-animate">
-        <div class="parallax-bg parallax-bg-2"></div>
-        <div class="container">
-            <h2 class="section-title neon-box">Featured Products</h2>
-            <div class="grid">
-                <div class="grid-item neon-box">
-                    <img src="https://via.placeholder.com/250x400" alt="Product 1" class="grid-img" loading="lazy">
-                    <h3 class="grid-title">GPK Product 1</h3>
-                    <p class="product-price">$10.00</p>
-                    <button class="add-to-cart neon-highlight">Add to Cart</button>
-                </div>
-                <div class="grid-item neon-box">
-                    <img src="https://via.placeholder.com/250x400" alt="Product 2" class="grid-img" loading="lazy">
-                    <h3 class="grid-title">GPK Product 2</h3>
-                    <p class="product-price">$15.00</p>
-                    <button class="add-to-cart neon-highlight">Add to Cart</button>
-                </div>
-                <div class="grid-item neon-box">
-                    <img src="https://via.placeholder.com/250x400" alt="Product 3" class="grid-img" loading="lazy">
-                    <h3 class="grid-title">GPK Product 3</h3>
-                    <p class="product-price">$20.00</p>
-                    <button class="add-to-cart neon-highlight">Add to Cart</button>
-                </div>
-                <div class="grid-item neon-box">
-                    <img src="https://via.placeholder.com/250x400" alt="Product 4" class="grid-img" loading="lazy">
-                    <h3 class="grid-title">GPK Product 4</h3>
-                    <p class="product-price">$25.00</p>
-                    <button class="add-to-cart neon-highlight">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Featured Products Section -->
-
-    <!-- Start Recommended Products Section -->
-    <section id="recommended-products" class="section minimalist">
-        <h2>Recommended for You</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="product1.jpg" alt="Product 1">
-                <p>Product 1</p>
-                <button class="view-3d">View in 3D</button>
-            </div>
-            <div class="product-item">
-                <img src="product2.jpg" alt="Product 2">
-                <p>Product 2</p>
-                <button class="view-3d">View in 3D</button>
-            </div>
-        </div>
-    </section>
-    <!-- End Recommended Products Section -->
-
-    <!-- Start Contact Section -->
-    <section id="contact" class="section glassmorphism scroll-animate">
-        <div class="container">
-            <h2 class="section-title neon-box">Contact Us</h2>
-            <form class="contact-form">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" id="name" name="name" class="form-input" required>
-
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" id="email" name="email" class="form-input" required>
-
-                <label for="message" class="form-label">Message:</label>
-                <textarea id="message" name="message" class="form-input" required></textarea>
-
-                <button type="submit" class="cta-button neon-highlight">Submit</button>
-            </form>
-        </div>
-    </section>
-    <!-- End Contact Section -->
-
-    <!-- Start Footer -->
-    <footer class="footer-section glassmorphism scroll-animate">
-        <div class="container footer-container">
             <p>&copy; 2024 CaliDef Collectables. All rights reserved.</p>
             <div class="social-links">
-                <a href="#" class="social-icon neon-highlight">Facebook</a>
-                <a href="#" class="social-icon neon-highlight">Instagram</a>
-                <a href="#" class="social-icon neon-highlight">Twitter</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
             </div>
         </div>
     </footer>
-    <!-- End Footer -->
 
-    <!-- External Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
