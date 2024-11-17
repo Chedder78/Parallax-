@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaliDef Collectables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="Your destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and merch.">
+</head>
+<body>
+    <header>
+        <div class="floating-header">
+            <div class="logo">
+                <h1>CaliDef Collectables</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-overlay"></div>
+
+    <main>
+        <!-- Parallax Hero Section -->
+        <div class="parallax parallax-hero">
+            <div class="content">
+                <h2>Welcome to CaliDef Collectables</h2>
+                <p>Your ultimate destination for vintage Garbage Pail Kids cards and merchandise.</p>
+                <a href="#products" class="cta-button">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Categories Section -->
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <h2>Categories</h2>
+                <div class="glass-grid">
+                    <div class="glass-card">
+                        <img src="images/series1.jpg" alt="GPK Series 1">
+                        <h3>Series 1</h3>
+                    </div>
+                    <div class="glass-card">
+                        <img src="images/series2.jpg" alt="GPK Series 2">
+                        <h3>Series 2</h3>
+                    </div>
+                    <div class="glass-card">
+                        <img src="images/rarecards.jpg" alt="Rare Cards">
+                        <h3>Rare Cards</h3>
+                    </div>
+                    <div class="glass-card">
+                        <img src="images/merchandise.jpg" alt="Merchandise">
+                        <h3>Merchandise</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax Featured Section -->
+        <div class="parallax parallax-featured">
+            <div class="content">
+                <h2>Featured Products</h2>
+                <p>Discover our curated collection of vintage Garbage Pail Kids items.</p>
+            </div>
+        </div>
+
+        <!-- Featured Products Section -->
+        <section id="featured" class="featured-section">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="glass-grid">
+                    <div class="glass-card">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 1">
+                        <h3>GPK Product 1</h3>
+                        <p>$10.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="glass-card">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 2">
+                        <h3>GPK Product 2</h3>
+                        <p>$15.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="glass-card">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 3">
+                        <h3>GPK Product 3</h3>
+                        <p>$20.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="glass-card">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 4">
+                        <h3>GPK Product 4</h3>
+                        <p>$25.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax Contact Section -->
+        <div class="parallax parallax-contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>Get in touch for inquiries about our vintage collections and merchandise.</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CaliDef Collectables. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
