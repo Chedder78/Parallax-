@@ -1,124 +1,58 @@
-/* cart.css */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror-Themed Cart</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="spooky-header">
+        <div class="logo">
+            <h1>Ghastly Cart</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-body {
-    font-family: 'Stink on the Death', sans-serif; /* Replace with your preferred custom fonts */
-    margin: 0;
-    padding: 0;
-    background: url('your-background-image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    <main>
+        <section class="cart-section">
+            <h1>Your Spooky Cart</h1>
+            <div class="cart-grid">
+                <div class="cart-item">
+                    <img src="images/item1.jpg" alt="Haunted Doll">
+                    <div class="item-details">
+                        <h3>Haunted Doll</h3>
+                        <p>$19.99</p>
+                        <button class="remove-button">Remove</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <img src="images/item2.jpg" alt="Cursed Candle">
+                    <div class="item-details">
+                        <h3>Cursed Candle</h3>
+                        <p>$29.99</p>
+                        <button class="remove-button">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <h2>Total: $49.98</h2>
+                <button class="checkout-button">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Faded opaque background overlay */
-    z-index: -1;
-}
+    <footer>
+        <p>© 2024 Ghastly Cart</p>
+    </footer>
 
-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #f39c12;
-    text-transform: uppercase;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.cart-section {
-    margin-top: 50px;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.1); /* Transparent box for cart content */
-    backdrop-filter: blur(8px); /* Glassmorphism effect */
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-}
-
-.cart-section h2 {
-    font-size: 2.5rem;
-    color: #ecf0f1;
-    margin-bottom: 30px;
-}
-
-#cart-items {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-}
-
-.cart-summary {
-    margin-top: 30px;
-    text-align: right;
-    font-size: 1.5rem;
-    color: #f1c40f;
-}
-
-#checkout-button {
-    padding: 15px 30px;
-    background-color: #f39c12;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#checkout-button:hover {
-    background-color: #e67e22;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-footer {
-    margin-top: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    text-align: center;
-    color: #bdc3c7;
-}
-
-footer p {
-    font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .cart-section {
-        padding: 20px;
-    }
-
-    .cart-section h2 {
-        font-size: 2rem;
-    }
-
-    #checkout-button {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-}
+    <script src="index.js"></script>
+</body>
+</html>
