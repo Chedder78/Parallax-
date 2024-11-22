@@ -314,7 +314,7 @@ footer .social-links a:hover {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Melted_Monster, sans-serif;
+    font-family: 'Melted_Monster', sans-serif;
     color: #333;
     background: #f0f0f0;
     overflow-x: hidden;
@@ -356,7 +356,7 @@ ul {
 }
 
 .logo h1 {
-    font-family: 'GPK Bold', sans-serif;
+    font-family: 'Melted_Monster', sans-serif;
     font-size: 1.8rem;
     color: #db3535;
     margin: 0;
@@ -461,15 +461,15 @@ ul {
 }
 
 .parallax-hero {
-    background-image: url('images/parallax-hero.jpg');
+    background-image: url('Gpk red cover banner.jpg');
 }
 
 .parallax-featured {
-    background-image: url('images/parallax-featured.jpg');
+    background-image: url('20241121193643.png');
 }
 
 .parallax-contact {
-    background-image: url('images/parallax-contact.jpg');
+    background-image: url('pop_cult_kids.jpg');
 }
 
 .parallax .content {
