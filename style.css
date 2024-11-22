@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Melted_Monster', sans-serif;
     color: #333;
     background: #f0f0f0;
     overflow-x: hidden;
@@ -44,7 +44,7 @@ ul {
 }
 
 .logo h1 {
-    font-family: 'Melted_Monster, sans-serif;
+    font-family: 'Melted_Monster', sans-serif;
     font-size: 1.8rem;
     color: #db3535;
     margin: 0;
@@ -149,15 +149,15 @@ ul {
 }
 
 .parallax-hero {
-    background-image: url('.jpg');
+    background-image: url('Os1 character cover.png');
 }
 
 .parallax-featured {
-    background-image: url('images/parallax-featured.jpg');
+    background-image: url('20240526224539.png');
 }
 
 .parallax-contact {
-    background-image: url('images/parallax-contact.jpg');
+    background-image: url('20240627031001.png');
 }
 
 .parallax .content {
