@@ -1,17 +1,17 @@
 /* General Reset and Base Styles */
 @font-face {
   font-family: 'StinkOnTheDeath';
-  src: url('Stink_on_the_Death.ttf') format('truetype');
+  src: url('Stink on the Death.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'MeltedMonster';
-  src: url('Melted_Monster.ttf') format('truetype');
+  src: url('Melted Monster.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'DarkRoast';
-  src: url('Dark_Roast.ttf') format('truetype');
+  src: url('Dark Roast.ttf') format('truetype');
 }
 
 body {
