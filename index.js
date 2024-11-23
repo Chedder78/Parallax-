@@ -34,3 +34,26 @@ document.querySelectorAll('#sliding-menu ul li a').forEach(function(menuItem) {
         });
     });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const cartCount = document.getElementById('cart-count');
+    const backToTopButton = document.getElementById('back-to-top');
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const currentCount = parseInt(cartCount.textContent, 10);
+            cartCount.textContent = currentCount + 1;
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
