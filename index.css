@@ -15,10 +15,6 @@
 }
 
 body {
-  font-family: 'StinkOnTheDeath', 'MeltedMonster', 'DarkRoast', sans-serif; /* Fallback to sans-serif */
-}
-
-body {
     margin: 0;
     padding: 0;
     font-family: 'MeltedMonster', sans-serif;
@@ -164,9 +160,9 @@ ul {
 }
 
 .parallax-hero { background-image: url('Gpk red cover banner.jpg'); }
-.parallax-categories { background-image: url('.jpg'); }
+.parallax-categories { background-image: url('20240627031001.png'); }
 .parallax-featured { background-image: url('20240319194016.png'); }
-.parallax-micro-cards { background-image: url('.jpg'); }
+.parallax-micro-cards { background-image: url('IMG_20240306_224148_407.jpg'); }
 .parallax-contact { background-image: url('pop_cult_kids.jpg'); }
 
 .parallax::after {
