@@ -11,10 +11,11 @@
 <body>
     <header>
         <div class="floating-header">
-            <div class="logo"><div class="logo-container">
-            <img src="" alt="Logo" class="logo">
-            <span class="site-name">CaliDef Collectables</span>
-            </div>
+            <div class="logo">
+                <div class="logo-container">
+                    <img src="" alt="Logo" class="logo">
+                    <span class="site-name">CaliDef Collectables</span>
+                </div>
                 <h1>CaliDef Collectables</h1>
             </div>
             <nav>
@@ -22,7 +23,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#categories">Categories</a></li>
                     <li><a href="#featured">Featured</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="#micro-cards">Micro Cards</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
                 </ul>
@@ -45,8 +46,8 @@
 
         <!-- Categories Section -->
         <section id="categories" class="categories-section">
-            <div class="container"> <a href="#categories">
-                <h2>Categories</h2></a>
+            <div class="container">
+                <h2>Categories</h2>
                 <div class="glass-grid">
                     <div class="glass-card">
                         <img src="images/series1.jpg" alt="GPK Series 1">
@@ -85,37 +86,40 @@
                         <img src="https://via.placeholder.com/250x400" alt="Product 1">
                         <h3>GPK Product 1</h3>
                         <p>$10.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart" data-name="GPK Product 1" data-price="10.00">Add to Cart</button>
                     </div>
                     <div class="glass-card">
                         <img src="https://via.placeholder.com/250x400" alt="Product 2">
                         <h3>GPK Product 2</h3>
                         <p>$15.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart" data-name="GPK Product 2" data-price="15.00">Add to Cart</button>
                     </div>
                     <div class="glass-card">
                         <img src="https://via.placeholder.com/250x400" alt="Product 3">
                         <h3>GPK Product 3</h3>
                         <p>$20.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart" data-name="GPK Product 3" data-price="20.00">Add to Cart</button>
                     </div>
                     <div class="glass-card">
                         <img src="https://via.placeholder.com/250x400" alt="Product 4">
                         <h3>GPK Product 4</h3>
                         <p>$25.00</p>
-                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-cart" data-name="GPK Product 4" data-price="25.00">Add to Cart</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Parallax Contact Section -->
-        <div class="parallax parallax-contact">
+        <!-- Parallax Micro Cards Section -->
+        <div class="parallax parallax-micro-cards">
             <div class="content">
-                <h2>Contact Us</h2>
-                <p>Get in touch for inquiries about our vintage collections and merchandise.</p>
+                <h2>Micro Cards</h2>
+                <p>Explore our exclusive range of limited-edition Micro Cards.</p>
             </div>
         </div>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top">Back to Top</button>
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
@@ -148,6 +152,6 @@
         </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
