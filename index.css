@@ -252,19 +252,23 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 
 }
 
-footer .social-links a {
-    color: #fff;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+.social-media-section {
+    display: flex;
+    gap: 20px;
 }
 
-footer .social-links a:hover {
-    color: #f7e25d;
+.social-media-link img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
 }
 
+.social-media-link img:hover {
+    transform: scale(1.2);
+}
 /* Back to Top Button */
 #back-to-top {
     position: fixed;
