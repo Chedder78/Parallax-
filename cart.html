@@ -28,9 +28,43 @@
                 </div>
             </div>
         </section>
-    </main>
+   <!DOCTYPE html>
+  <h1>Checkout</h1>
 
-    <footer>
+  <!-- Address Form -->
+  <form id="address-form" method="POST" action="https://formspree.io/f/your-form-id">
+    <h2>Shipping Address</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required>
+    <label for="zip">ZIP Code:</label>
+    <input type="text" id="zip" name="zip" required>
+
+    <button type="submit">Save Address</button>
+  </form>
+
+  <!-- PayPal Buy Now Button -->
+  <h2>Complete Payment</h2>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="your-paypal-email@example.com">
+    <input type="hidden" name="item_name" value="Your Product Name">
+    <input type="hidden" name="amount" value="40.00">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="shipping" value="5.00">
+    <input type="hidden" name="return" value="https://your-website.github.io/success.html">
+    <input type="hidden" name="cancel_return" value="https://your-website.github.io/cancel.html">
+    <button type="submit">Pay Now</button>
+  </form>
+ </main>
+ <footer>
         <div class="container">
             <p>&copy; 2024 CaliDef Collectables. All rights reserved.</p>
         </div>
