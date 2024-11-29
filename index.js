@@ -44,6 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
             cartCount.textContent = currentCount + 1;
         });
     });
+// Add this to your existing JavaScript file
+function fetchDataFromPython() {
+    fetch('/api/data')
+        .then(response => response.json())
+        .then(data => {
+            // Handle the data here
+            console.log(data);
+            // Update your UI as needed
+        })
+        .catch(error => console.error('Error:', error));
+}
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
