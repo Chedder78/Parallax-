@@ -1,9 +1,13 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
 import os
+from flask import Flask, render_template, request, redirect, url_for, session, flash
+from dotenv import load_dotenv
+
+# Load environment variables from .env file (optional, for local use)
+load_dotenv()
 
 # Create Flask instance
 app = Flask(__name__)
-app.secret_key = 'your_secret_key_here'  # Replace with a secure secret key
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'default_secret_key')  # Use environment variable for the secret key
 
 # Sample product data (you can replace this with a database or other data source later)
 products = {
@@ -23,7 +27,7 @@ def index():
 def add_to_cart(product_id):
     if 'cart' not in session:
         session['cart'] = {}
-    
+
     cart = session['cart']
 
     if str(product_id) in cart:
