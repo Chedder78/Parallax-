@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaliDef Collectables - GPK Cards & Merch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Your destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and merch.">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>CaliDef Collectables</h1>
+            </div>
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <nav id="sliding-menu" class="sliding-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            <li><a href="#account">Account</a></li>
+        </ul>
+    </nav>
+
+    <div id="overlay"></div>
+
+    <main>
+        <div class="parallax parallax-1">
+            <div class="content">
+                <h2>Welcome to CaliDef Collectables</h2>
+                <p>Your ultimate destination for vintage GPK cards and merchandise.</p>
+            </div>
+        </div>
+
+        <section id="home" class="hero-section">
+            <div class="container">
+                <h2>Discover Vintage Garbage Pail Kids Cards</h2>
+                <p>Your ultimate destination for GPK cards and merchandise.</p>
+                <a href="#products" class="cta-button">Shop Now</a>
+            </div>
+        </section>
+
+        <div class="parallax parallax-2">
+            <div class="content">
+                <h2>Categories</h2>
+            </div>
+        </div>
+
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <h2>Categories</h2>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="images/parallax-1.jpg" alt="GPK Series 1">
+                        <h3>Series 1</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/parallax-2.jpg" alt="GPK Series 2">
+                        <h3>Series 2</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/parallax-3.jpg" alt="GPK Rare Cards">
+                        <h3>Rare Cards</h3>
+                    </div>
+                    <div class="category-item">
+                        <img src="images/parallax-4.jpg" alt="GPK Merchandise">
+                        <h3>Merchandise</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="parallax parallax-3">
+            <div class="content">
+                <h2>Featured Products</h2>
+            </div>
+        </div>
+
+        <section id="featured" class="featured-section">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="featured-grid">
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 1">
+                        <h3>GPK Product 1</h3>
+                        <p>$10.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 2">
+                        <h3>GPK Product 2</h3>
+                        <p>$15.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 3">
+                        <h3>GPK Product 3</h3>
+                        <p>$20.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="https://via.placeholder.com/250x400" alt="Product 4">
+                        <h3>GPK Product 4</h3>
+                        <p>$25.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="parallax parallax-4">
+            <div class="content">
+                <h2>All Products</h2>
+            </div>
+        </div>
+
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2>All Products</h2>
+                <div class="scroll-container">
+                    <div class="product-grid" id="all-products">
+                        <!-- Products will be dynamically added here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="parallax parallax-5">
+            <div class="content">
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CaliDef Collectables. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('sliding-menu');
+            var overlay = document.getElementById('overlay');
+            if (menu.classList.contains('show-menu')) {
+                menu.classList.remove('show-menu');
+                overlay.style.display = 'none';
+            } else {
+                menu.classList.add('show-menu');
+                overlay.style.display = 'block';
+            }
+        });
+
+        document.getElementById('overlay').addEventListener('click', function() {
+            var menu = document.getElementById('sliding-menu');
+            var overlay = document.getElementById('overlay');
+            menu.classList.remove('show-menu');
+            overlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

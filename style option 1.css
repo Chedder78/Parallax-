@@ -1,0 +1,266 @@
+/* Common styles */
+body {
+    font-family: 'Melted Monster.ttf', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background: black;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.sliding-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: black;
+    color: #fff;
+    transition: left 0.3s ease;
+    z-index: 1001;
+    padding-top: 60px;
+}
+
+.sliding-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sliding-menu ul li {
+    padding: 10px 20px;
+}
+
+.sliding-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.sliding-menu ul li a:hover {
+    background: #444;
+}
+
+.show-menu {
+    left: 0;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+main {
+    margin-top: 60px;
+}
+
+.parallax {
+    height: 100vh; /* Full viewport height */
+    min-height: 350px; /* Minimum height for smaller screens */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.parallax::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+    z-index: 1;
+}
+
+.parallax > .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.parallax-1 {
+    background-image: url('tjLeFGMSSKq7BAtRQchAiw.png');
+}
+
+.parallax-2 {
+    background-image: url('Os1 character cover.png');
+}
+
+.parallax-3 {
+    background-image: url('IMG_20240306_224148_407.jpg');
+}
+
+.parallax-4 {
+    background-image: url('20240319194016.png');
+}
+
+.parallax-5 {
+    background-image: url('20220202_223816.jpg');
+}
+
+.hero-section {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section .cta-button {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.categories-section,
+.featured-section,
+.products-section,
+.contact-section,
+.cart-section {
+    padding: 60px 20px;
+    background: #f4f4f4;
+    position: relative;
+    z-index: 1;
+}
+
+.categories-section h2,
+.featured-section h2,
+.products-section h2,
+.contact-section h2,
+.cart-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.category-grid,
+.featured-grid,
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.category-item,
+.product-item {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-item img,
+.product-item img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.add-to-cart {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.scroll-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.product-grid {
+    display: inline-flex;
+    gap: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header-extras {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .parallax {
+        background-attachment: scroll; /* Disable parallax effect on smaller screens */
+    }
+}
