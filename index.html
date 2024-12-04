@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaliDef Collectables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Melted+Monster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <img src="{{ url_for('static', filename='images/example.jpg') }}" alt="Example Image">
+
+    <meta name="description" content="Your destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and merch.">
+</head>
+<body>
+    <header>
+        <div class="floating-header">
+            <div class="logo">
+                <h1>CaliDef Collectables</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#micro-cards">Micro Cards</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Parallax Hero Section -->
+        <div class="parallax parallax-hero">
+            <div class="content">
+                <h2>Welcome to CaliDef Collectables: The Bootloot Empire</h2>
+                <p>Your Ultimate Destination For Custom Garbage Pail Kids Cards, Merchandise, And More!</p>
+                <a href="#categories" class="cta-button">Explore Now</a>
+            </div>
+        </div>
+
+        <!-- Categories Section -->
+        <div class="parallax parallax-categories">
+            <div class="content">
+                <h2>What You'll Find At The BootLoot Empire</h2>
+                <p>Explore Our Diverse And Unique Custom Creations Of Garbage Pail Kids Collectables</p>
+            </div>
+        </div>
+        <section id="categories" class="categories-section">
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <img src="IMG_20240306_224148_407.jpg" alt="GPK Series 1">
+                    <h3>Original Series 1 Replica Wax Packs Custom Gold Foil Stamped</h3>
+                </div>
+                <div class="glass-card">
+                    <img src="20210804_060225.jpg" alt="GPK Series 2">
+                    <h3>Micro Blaster Boxes include 5 Micro Wax Packs Per Blaster</h3>
+                </div>
+                <div class="glass-card">
+                    <img src="20240416_213904.jpg" alt="Rare Cards">
+                    <h3>Selection of Custom Refractors (limited Quantity!)</h3>
+                </div>
+                <div class="glass-card">
+                    <img src="20240617_200446.jpg" alt="Merchandise">
+                    <h3>GPK Collective Group Pins Collection</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Section -->
+        <div class="parallax parallax-featured">
+            <div class="content">
+                <h2>Featured</h2>
+                <p>CaliDef Custom Designer GPK Items.</p>
+            </div>
+        </div>
+        <section id="featured" class="featured-section">
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <img src="Stoned Sean merch.png" alt="Product 1">
+                    <h3>Unique Prop/Gag Gift Items</h3>
+                    <p>$35.00</p>
+                    <button class="add-to-cart" data-name="GPK Product 1" data-price="10.00">Add to Cart</button>
+                </div>
+                <div class="glass-card">
+                    <img src="20220506_115059.jpg" alt="Product 2">
+                    <h3>Custom Refractors Made In Non Traditional Styles And Colors</h3>
+                    <p>$35.00 each</p>
+                    <button class="add-to-cart" data-name="GPK Product 2" data-price="15.00">Add to Cart</button>
+                </div>
+                <div class="glass-card">
+                    <img src="20220202_223816.jpg" alt="Product 3">
+                    <h3>Six Different Glow Colors To Choose From!</h3>
+                    <p>$7.50 each</p>
+                    <button class="add-to-cart" data-name="GPK Product 3" data-price="20.00">Add to Cart</button>
+                </div>
+                <div class="glass-card">
+                    <image src="GlowCardsSheet.jpg" alt="Product 4">
+                    <h3>Sequentially Stamped Gold Cards. Choose From: Red, Green, Or Gold Foils</h3>
+                    <p>$25.00</p>
+                    <button class="add-to-cart" data-name="GPK Product 4" data-price="25.00">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Micro Cards Section -->
+        <div class="parallax parallax-micro-cards">
+            <div class="content">
+                <h2>The Microverse</h2>
+                <p>Explore The Extensive Selection Of The Highest Quality Micro Cards In The World!</p>
+            </div>
+        </div>
+        <section id="micro-cards" class="micro-cards-section">
+            <div class="glass-grid">
+                <div class="glass-card">
+                    <img src="Screenshot_20201221-193558_Photos.jpg" alt="Micro OS1">
+                    <h3>Full Series Sets Inside OS Micro Boxes</h3>
+                    <p>$90.00</p>
+                    <button class="add-to-cart" data-name="Micro Card 1" data-price="5.00">Add to Cart</button>
+                </div>
+                <div class="glass-card">
+                    <img src="20231203_162234.jpg" alt="Micro Blasters">
+                    <h3>Micro Blaster Boxes</h3>
+                    <p>$65.00</p>
+                    <button class="add-to-cart" data-name="Micro Card 2" data-price="7.00">Add to Cart</button>
+                </div>
+                <div class="glass-card">
+                    <img src="USER_SCOPED_TEMP_DATA_orca-image-1620785334927_6798066413429508682.jpeg" alt="Micro rack packs">
+                    <h3>Micro Rack Packs</h3>
+                    <p>$35.00</p>
+                    <button class="add-to-cart" data-name="Micro Card 3" data-price="6.00">Add to Cart</button>
+                </div>
+                <div class="glass-card">
+                    <img src="IMG_20230905_020754.jpg" alt="Micro Card Backs">
+                    <h3>Custom Cardback Blisters</h3>
+                    <p>$90</p>
+                    <button class="add-to-cart" data-name="Micro Card 4" data-price="8.00">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top">Back to Top</button>
+
+        <!-- Contact Section -->
+        <div class="parallax parallax-contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you! Reach out with any questions or inquiries.</p>
+            </div>
+        </div>
+        <section id="contact" class="contact-section">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CaliDef Collectables. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/calidef.interchange?mibextid=ZbWKwL" target="_blank" class="social-media-link">
+            <img src="pngwing.com.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/cali_def/profilecard/?igsh=MzRlODBiNWFlZA==" target="_blank" class="social-media-link">
+            <img src="pngwing.com (1).png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@calidefcustoms?_t=8refHKv6R8k&_r=1" target="_blank" class="social-media-link">
+            <img src="pngwing.com (2).png" alt="TikTok">
+                </a>
+            </div>
+        </div>
+    </div>
+ </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
