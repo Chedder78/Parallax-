@@ -1,27 +1,49 @@
-# Byte-compiled / optimized / DLL files
+# Ignore virtual environment files
+env/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# Ignore compiled Python files
 __pycache__/
-*$py.class
+*.pyc
 
-# Flask environment
-instance/
-.env
+# Ignore deployment packages and installed dependencies
+*.dist-info/
+site-packages/
 
-# Flask-related
-*.log
-*.sqlite3
-
-# IDEs
-.vscode/
+# Ignore any files that are specific to local development tools or configurations
+.DS_Store
 .idea/
 *.swp
+*.vscode/
 
+# Ignore any video files
+*.mp4
 
-cart.js99
-index option 1.html
-index(test).html
+# Keep all required deployment-related files
+!.github/
+!.github/workflows/
+!deploy.yml
+!static.yml
+
+# Keep all images
+!static/images/*.jpg
+!static/images/*.png
+!static/images/*.jpeg
+
+# Ignore unnecessary HTML, CSS, JS, and other draft/test files
 index.css99
-index.html99
 index.js99
-index2.html
+index.html99
+index(test).html
+index option 1.html
 style2
 styleO.css
+cart.js99
+app.cpython-312.pyc
+
+# Keep necessary files for deployment
+!README.md
+!app.py
+!requirements.txt
