@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask environment
+instance/
+.env
+
+# Flask-related
+*.log
+*.sqlite3
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Static files
+static/*.map
