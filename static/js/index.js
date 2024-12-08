@@ -29,3 +29,24 @@ function updateCartCount() {
         document.getElementById('cart-count').innerText = cartCount;
     });
 }
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        backToTop.classList.remove('hide');
+    } else {
+        backToTop.classList.add('hide');
+    }
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+const toggleButton = document.querySelector('.dark-mode-toggle');
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('light-mode');
+});
+const spinner = document.getElementById('loading-spinner');
+window.addEventListener('load', () => {
+    spinner.style.display = 'none';
+});
