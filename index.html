@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaliDef Collectables</title>
     <link href="https://fonts.googleapis.com/css2?family=Melted+Monster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/cart.css') }}">
+    <link rel="stylesheet" ref="index.css">
+    <link rel="stylesheet" ref="cart.css">
     <meta name="description" content="Your destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and merch.">
 </head>
 <body>
@@ -83,7 +83,7 @@
                     <button class="add-to-cart" data-id="3">Add to Cart</button>
                 </div>
                 <div class="glass-card">
-                    <img src="{{ url_for('static', filename='css/images/GlowCardsSheet.jpg') }}" alt="Product 4">
+                    <img src="static/images/GlowCardsSheet.jpg" alt="Product 4">
                     <h3>Sequentially Stamped Gold Cards. Choose From: Red, Green, Or Gold Foils</h3>
                     <p>$25.00</p>
                     <button class="add-to-cart" data-id="4">Add to Cart</button>
@@ -93,7 +93,6 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
-            <form action="{{ url_for('contact') }}" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -114,7 +113,6 @@
         </div>
     </footer>
     <button id="back-to-top" class="hide">↑ Top</button>
- <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
- <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+ <script src="index.js"></script>
 </body>
 </html>
