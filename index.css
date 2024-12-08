@@ -28,6 +28,50 @@ button:active::after, .cta-button:active::after {
 html {
     scroll-behavior: smooth;
 }
+/* Parallax Section Styles */
+.parallax {
+    height: 100vh;
+    min-height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.parallax-hero {
+    background-image: url('static/images/hero-banner.jpg'); /* Replace with your hero image */
+}
+
+.parallax-featured {
+    background-image: url('static/images/featured-banner.jpg'); /* Replace with your featured image */
+}
+
+.parallax::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.parallax .content {
+    z-index: 2;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 
 .menu a.active {
     border-bottom: 2px solid #db3535;
