@@ -28,6 +28,7 @@ button:active::after, .cta-button:active::after {
 html {
     scroll-behavior: smooth;
 }
+
 /* Parallax Section Styles */
 .parallax {
     height: 100vh;
@@ -44,11 +45,19 @@ html {
 }
 
 .parallax-hero {
-    background-image: url('static/images/hero-banner.jpg'); /* Replace with your hero image */
+    background-image: url(''); /* Image removed */
 }
 
 .parallax-featured {
-    background-image: url('static/images/featured-banner.jpg'); /* Replace with your featured image */
+    background-image: url(''); /* Image removed */
+}
+
+.parallax-categories {
+    background-image: url(''); /* Image removed */
+}
+
+.parallax-micro-cards {
+    background-image: url(''); /* Image removed */
 }
 
 .parallax::after {
@@ -71,7 +80,6 @@ html {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
 
 .menu a.active {
     border-bottom: 2px solid #db3535;
@@ -115,18 +123,18 @@ html {
 }
 
 /* Social Media Icon Hover Effects */
-.social-media-link img {
+.social-links a img {
     filter: grayscale(100%);
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.social-media-link img:hover {
+.social-links a img:hover {
     filter: grayscale(0%);
     transform: scale(1.3);
 }
 
 /* Tooltip for Social Media Icons */
-.social-media-link::after {
+.social-links a::after {
     content: attr(data-tooltip);
     position: absolute;
     bottom: -30px;
@@ -141,7 +149,7 @@ html {
     transition: opacity 0.3s ease;
 }
 
-.social-media-link:hover::after {
+.social-links a:hover::after {
     opacity: 1;
 }
 
@@ -210,4 +218,13 @@ body.dark-mode {
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+/* Font Family Placeholders */
+p {
+    font-family: 'Windsor', sans-serif;
+}
+
+h1 {
+    font-family: 'Melted Monster', cursive;
 }
