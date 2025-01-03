@@ -4,168 +4,347 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaliDef Collectables</title>
-    <link href="https://fonts.googleapis.com/css2?family=Melted+Monster&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Melted+Monster&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <meta name="description" content="Your destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and merch.">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF0000, #FFFFFF, #0000FF">
+    <meta name="description" content="Your Gateway To Garbage Pail Kids Cards, Merch, and Unique Custom Collectables!">
+    <meta name="keywords" content="Collectables, Garbage Pail Kids, GPK, OS1, OS2, OS3, Bootleg, Calidef, CaliDef, Original Series 1, Adam Bomb, Nasty Nick, Dead Ted, John Pound, Tom Bunk, Cards, Merch, Collectables">
+    <meta name="author" content="CaliDef Collectables">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Navigation Bar -->
     <header>
-        <div class="header-container">
-            <img src="calidef_logo_icon.png" alt="Logo" class="logo">
-            <h1 class="logo">CaliDef Collectables</h1>
-            <p>Your destination for vintage Garbage Pail Kids cards, sets, errors, subsets, and merch.</p>
-        </div>
-        <!-- Navigation Banner -->
-        <nav class="nav-banner">
-            <ul class="menu">
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#featured">Featured</a></li>
+        <nav class="navbar">
+            <a href="spinning_heads_page.html" class="logo">
+                <img src="images/calidef_logo.png" alt="CaliDef Logo" height="50" loading="lazy">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
                 <li><a href="#micro-cards">Micro Cards</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#refractors">Refractors</a></li>
+                <li><a href="#os-cards">OS GPK Cards</a></li>
             </ul>
+            <button class="cart-btn" onclick="location.href='checkout.html'">View Cart</button>
         </nav>
     </header>
 
-    <!-- Slide Modals -->
-    <div id="modals">
-        <div class="modal" id="modal1">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Categories Section</p>
+    <!-- Hero Parallax Section -->
+    <section class="parallax" style="background-image: url('images/gpk_vertical_circle.png'); height: 500px;">
+        <div class="parallax-title">
+            <h1>Welcome to CaliDef Collectables</h1>
+            <h3>Where Collectors Find What They Need.</h3>
+            <button class="cta" onclick="location.href='#os-gpk-cards'">Original Series GPK</button>
+        </div>
+    </section>
+
+    <!-- OS Section -->
+    <section class="products" id="os-cards">
+        <h1>Original Series</h1>
+        <div class="product-grid">
+            <div class="product-card" onclick="openModal('product3')">
+                <img src="images/os3.png" alt="OS3" loading="lazy">
+                <h3>OS3 Complete Base Set</h3>
+                <p>$75.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" onclick="openModal('product4')">
+                <img src="images/os4.png" alt="OS4" loading="lazy">
+                <h3>OS4 Complete Variation Set</h3>
+                <p>$100.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" onclick="openModal('product5')">
+                <img src="images/os5.png" alt="OS5" loading="lazy">
+                <h3>OS5 Complete Base Set</h3>
+                <p>$85.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" onclick="openModal('product6')">
+                <img src="images/os6.png" alt="OS6" loading="lazy">
+                <h3>OS6 Complete Base Set</h3>
+                <p>$90.00</p>
+                <button>Add to Cart</button>
             </div>
         </div>
-        <div class="modal" id="modal2">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Featured Section</p>
+    </section>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="modal-slide" id="product3">
+                <img src="images/os3.png" alt="OS3">
             </div>
-        </div>
-        <div class="modal" id="modal3">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Micro Cards Section</p>
+            <div class="modal-slide" id="product4">
+                <img src="images/os4.png" alt="OS4">
             </div>
-        </div>
-        <div class="modal" id="modal4">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Contact Section</p>
+            <div class="modal-slide" id="product5">
+                <img src="images/os5.png" alt="OS5">
+            </div>
+            <div class="modal-slide" id="product6">
+                <img src="images/os6.png" alt="OS6">
             </div>
         </div>
     </div>
 
-    <main>
-        <!-- Parallax Hero Section -->
-        <div class="parallax parallax-hero">
-            <div class="content">
-                <h2>Welcome to CaliDef Collectables</h2>
-                <p>Exclusive Garbage Pail Kids Cards and Merchandise</p>
-            </div>
+    <!-- Parallax Section -->
+    <section class="parallax" style="background-image: url('images/pop_cult_kids.jpg'), height: 500px;">
+        <div class="parallax-title">
+            <h1>All New Series</h1>
         </div>
+    </section>
 
-        <!-- Categories Section -->
-        <section id="categories" class="content-section">
-            <h2>Categories</h2>
-            <div class="glass-grid">
-                <div class="glass-card">
-                    <img src="os1_packs_goldstamp.jpg.jpg" alt="GPK Series 1">
-                    <img src="os1_bootloot_cards.jpg" alt="GPK Series 1">
-                    <h3>Original Series 1 Replica Wax Packs</h3>
-                </div>
-                <div class="glass-card">
-                    <img src="micro_rack_packs.jpg" alt="GPK Series 2">
-                    <img src="micro_blaster_os10.jpg.jpg" alt="GPK Series 2">
-                    <h3>Micro Cards</h3>
-                </div>
-                <div class="glass-card">
-                    <img src="custom_holofoil_refractors.jpg" alt="Rare Cards">
-                    <img src="adam_sapphires.jpg" alt="Rare Cards">
-                    <h3>Custom Refractors</h3>
-                </div>
-            </div>
-        </section>
-
-        <!-- Parallax Separator -->
-        <div class="parallax parallax-categories">
-            <img src="gpk_vertical_circle.png" alt="Parallax Placeholder 1">
+  <!-- All New Series Section -->
+<section id="all-new-series" class="products">
+    <h2>All New Series</h2>
+    <div class="product-grid">
+        <div class="product-card" onclick="openModal('ans1')">
+            <img src="images/ans1.png" alt="ANS 1" loading="lazy">
+            <h3>ANS 1 Complete Set</h3>
+            <p>$95.00</p>
+            <button>Add to Cart</button>
         </div>
-
-        <!-- Featured Section -->
-        <section id="featured" class="content-section">
-            <h2>Featured Products</h2>
-            <div class="glass-grid">
-                <div class="glass-card">
-                    <img src="images/Stoned Sean merch.png" alt="Product 1">
-                    <h3>Unique Novelty Items</h3>
-                    <p>$35.00</p>
-                </div>
-                <div class="glass-card">
-                    <img src="kryptonite_custom_refractor.jpg" alt="Product 2">
-                    <h3>Custom Refractors</h3>
-                    <p>$35.00</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Parallax Separator -->
-        <div class="parallax parallax-featured">
-            <img src="Gpk red cover banner.jpg" alt="Parallax Placeholder 2">
+        <div class="product-card" onclick="openModal('ans2')">
+            <img src="images/ans2.png" alt="ANS 2" loading="lazy">
+            <h3>ANS 2 Complete Set</h3>
+            <p>$100.00</p>
+            <button>Add to Cart</button>
         </div>
-
-        <!-- Micro Cards Section -->
-        <section id="micro-cards" class="content-section">
-            <h2>Micro Cards</h2>
-            <div class="glass-grid">
-                <div class="glass-card">
-                    <img src="images/20220202_223816.jpg" alt="Product 3">
-                    <h3>Glow Cards</h3>
-                    <p>$7.50</p>
-                </div>
-                <div class="glass-card">
-                    <img src="glow_card_sheet.jpg" alt="Product 4">
-                    <h3>Gold Cards</h3>
-                    <p>$25.00</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Parallax Separator -->
-        <div class="parallax parallax-micro-cards">
-            <img src="" alt="pop_cult_kids.jpg">
+         <div class="product-card" onclick="openModal('ans3'">
+            <img src="images/ans.png" alt="ANS 3" loading="lazy">
+            <h3>ANS 3 Complete Set</h3>
+            <p>$100.00</p>
+            <button>Add to Cart</button>
         </div>
+         <div class="product-card" onclick="openModal('ans4')">
+            <img src="images/ans.png" alt="ANS 4" loading="lazy">
+            <h3>ANS 4 Complete Set</h3>
+            <p>$100.00</p>
+            <button>Add to Cart</button>
+        </div>
+         <div class="product-card" onclick="openModal('ans5')">
+            <img src="images/ans.png" alt="ANS 5" loading="lazy">
+            <h3>ANS 5 Complete Set</h3>
+            <p>$100.00</p>
+            <button>Add to Cart</button>
+        </div>
+         <div class="product-card" onclick="openModal('ans6')">
+            <img src="images/ans.png" alt="ANS 6" loading="lazy">
+            <h3>ANS 6 Complete Set</h3>
+            <p>$100.00</p>
+            <button>Add to Cart</button>
+        </div>
+         <div class="product-card" onclick="openModal('ans7')">
+            <img src="images/ans.png" alt="ANS 7" loading="lazy">
+            <h3>ANS 7 Complete Set</h3>
+            <p>$100.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+    
+    <!-- Parallax Section -->
+    <section class="parallax" style="background-image: url('gpk_faces.jpg'); height: 500px;">
+        <div class="parallax-title">
+            <h1>Chrome Series</h1>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="content-section">
-            <h2>Contact Us</h2>
-            <form action="contact.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+ <!-- Chrome Series Sets Section -->
+<section id="chrome-series-sets" class="products">
+    <h2>Chrome Series Sets</h2>
+    <div class="product-grid">
+        <div class="product-card" onclick="openModal('chrome1')">
+            <img src="images/chrome.png" alt="Chrome Series 1" loading="lazy">
+            <h3>Chrome Series 1 Complete Set</h3>
+            <p>$120.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" onclick="openModal('chrome2')">
+            <img src="images/chrome.png" alt="Chrome Series 2" loading="lazy">
+            <h3>Chrome Series 2 Complete Set</h3>
+            <p>$130.00</p>
+            <button>Add to Cart</button>
+        </div>
+         <div class="product-card" onclick="openModal('chrome3')">
+            <img src="images/chrome.png" alt="Chrome Series 3" loading="lazy">
+            <h3>Chrome Series 3 Complete Set</h3>
+            <p>$130.00</p>
+            <button>Add to Cart</button>
+        </div>
+         <div class="product-card" onclick="openModal('chrome4')">
+            <img src="images/chrome.png" alt="Chrome Series 4" loading="lazy">
+            <h3>Chrome Series 4 Complete Set</h3>
+            <p>$130.00</p>
+            <button>Add to Cart</button>
+        </div>
+         <div class="product-card" onclick="openModal('chrome5')">
+            <img src="images/chrome.png" alt="Chrome Series 5" loading="lazy">
+            <h3>Chrome Series 5 Complete Set</h3>
+            <p>$130.00</p>
+            <button>Add to Cart</button>
+        </div>
+         <div class="product-card" onclick="openModal('chrome6')">
+            <img src="images/chrome.png" alt="Chrome Series 6" loading="lazy">
+            <h3>Chrome Series 6 Complete Set</h3>
+            <p>$130.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+    <!-- Parallax Section -->
+<section class="parallax" style="background-image: url('images/theme_parallax.jpg'); height: 500px;">
+    <div class="parallax-title">
+        <h1>Themed Series</h1>
+    </div>
+</section>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+    <!-- Themed Series Sets Section -->
+<section id="themed-series-sets" class="products">
+    <h2>Themed Series Sets</h2>
+    <div class="product-grid">
+        <div class="product-card" onclick="openModal('theme1')">
+            <img src="images/theme1.png" alt="Theme Series 1" loading="lazy">
+            <h3>Theme Series 1 Complete Set</h3>
+            <p>$110.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" onclick="openModal('theme2')">
+            <img src="images/theme2.png" alt="Theme Series 2" loading="lazy">
+            <h3>Theme Series 2 Complete Set</h3>
+            <p>$115.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
+    <!-- Parallax Section -->
+<section class="parallax" style="background-image: url('images/gpk_single_parallax.jpg'); height: 500px;">
+    <div class="parallax-title">
+        <h1>Garbage Pail Kids Singles</h1>
+    </div>
+</section>
 
-    <footer>
+    <!-- Garbage Pail Kids Single Cards Section -->
+<section id="gpk-single-cards" class="products">
+    <h2>Garbage Pail Kids Single Cards</h2>
+    <div class="product-grid">
+        <div class="product-card" onclick="openModal('gpk1')">
+            <img src="images/gpk1.png" alt="GPK Single 1" loading="lazy">
+            <h3>GPK Single Card 1</h3>
+            <p>$10.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" onclick="openModal('gpk2')">
+            <img src="images/gpk2.png" alt="GPK Single 2" loading="lazy">
+            <h3>GPK Single Card 2</h3>
+            <p>$12.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Parallax Section -->
+<section class="parallax" style="background-image: url('images/micro_parallax.jpg'); height: 500px;">
+    <div class="parallax-title">
+        <h1>Custom Crafted GPK Micro</h1>
+    </div>
+</section>
+
+    <!-- World's Best Micro Section -->
+<section id="worlds-best-micro" class="products">
+    <h2>World's Best Micro Cards</h2>
+    <div class="product-grid">
+        <div class="product-card" onclick="openModal('micro1')">
+            <img src="images/micro1.png" alt="Micro 1" loading="lazy">
+            <h3>Micro Card 1</h3>
+            <p>$5.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" onclick="openModal('micro2')">
+            <img src="images/micro2.png" alt="Micro 2" loading="lazy">
+            <h3>Micro Card 2</h3>
+            <p>$6.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Parallax Section -->
+<section class="parallax" style="background-image: url('images/refractor_parallax.jpg'); height: 500px;">
+    <div class="parallax-title">
+        <h1>Custom Crafted Creations</h1>
+    </div>
+</section>
+
+    <!-- Custom Made Refractors Section -->
+<section id="custom-refractors" class="products">
+    <h2>Custom Made Refractors</h2>
+    <div class="product-grid">
+        <div class="product-card" onclick="openModal('refractor1')">
+            <img src="images/refractor1.png" alt="Custom Refractor 1" loading="lazy">
+            <h3>Custom Refractor 1</h3>
+            <p>$50.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" onclick="openModal('refractor2')">
+            <img src="images/refractor2.png" alt="Custom Refractor 2" loading="lazy">
+            <h3>Custom Refractors 2</h3>
+            <p>$55.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Parallax Section -->
+<section class="parallax" style="background-image: url('images/novelty_parallax.jpg'); height: 500px;">
+    <div class="parallax-title">
+        <h1>Custom Crafted Novelty</h1>
+    </div>
+</section>
+
+    <!-- Custom Made Novelty Items Section -->
+<section id="custom-novelty-items" class="products">
+    <h2>Custom Made Novelty Items</h2>
+    <div class="product-grid">
+        <div class="product-card" onclick="openModal('novelty1')">
+            <img src="images/novelty1.png" alt="Custom Novelty 1" loading="lazy">
+            <h3>Custom Novelty Item 1</h3>
+            <p>$20.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" onclick="openModal('novelty2')">
+            <img src="images/novelty2.png" alt="Custom Novelty 2" loading="lazy">
+            <h3>Custom Novelty Item 2</h3>
+            <p>$25.00</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
         <div class="footer-container">
-            <p>&copy; 2024 CaliDef Collectables. All rights reserved.</p>
-            <ul class="social-links">
-                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-            </ul>
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">How To Take Care Of Your Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                </ul>
+            </div>
         </div>
+        <p class="footer-note">&copy; 2024 CaliDef Collectables. All Rights Reserved.</p>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </body>
 </html>
