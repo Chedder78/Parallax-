@@ -167,6 +167,24 @@ body {
     cursor: pointer;
 }
 
+@font-face {
+    font-family: 'Melted Monster';
+    src: url('path/to/MeltedMonster.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Dark Roast';
+    src: url('path/to/DarkRoast.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Melted Monster', sans-serif;
+}
+
+p, body, .navbar, .product-card, .modal-slide {
+    font-family: 'Dark Roast', sans-serif;
+}
+
 .footer {
     background: #333;
     color: white;
