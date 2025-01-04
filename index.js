@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ripple.style.top = `${e.clientY - rect.top}px`;
             ripple.classList.add('ripple-effect');
             this.appendChild(ripple);
-
             setTimeout(() => ripple.remove(), 600);
         });
     });
@@ -91,34 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cartModal.style.display = 'none';
     });
 
-    // Product Slider
-    const slider = document.querySelector('.product-grid');
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-    const cardWidth = 220;
-
-    let currentScroll = 0;
-
-    const updateButtons = () => {
-        const maxScroll = -(slider.scrollWidth - slider.clientWidth);
-        rightArrow.disabled = currentScroll <= maxScroll;
-        leftArrow.disabled = currentScroll >= 0;
-    };
-
-    rightArrow.addEventListener('click', () => {
-        currentScroll -= cardWidth;
-        slider.style.transform = `translateX(${currentScroll}px)`;
-        updateButtons();
-    });
-
-    leftArrow.addEventListener('click', () => {
-        currentScroll += cardWidth;
-        slider.style.transform = `translateX(${currentScroll}px)`;
-        updateButtons();
-    });
-
-    updateButtons();
-
     // Modal Functions
     function openModal(productId) {
         document.getElementById('productModal').style.display = 'block';
@@ -142,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log("Service Worker registered with scope:", registration.scope);
                 })
                 .catch((error) => {
-                    console.error("Service Worker registration failed:", error); // No change needed; logs registration errors.
+                    console.error("Service Worker registration failed:", error);
                 });
         });
     }
@@ -164,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const img = document.createElement('img');
                 img.src = product.image_url;
                 img.alt = product.name;
+                img.loading = 'lazy';
                 productCard.appendChild(img);
 
                 const name = document.createElement('h3');
