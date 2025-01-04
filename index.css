@@ -85,14 +85,14 @@ body {
 }
 
 .products {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
     background: var(--background-gradient);
     text-align: center;
 }
 
 .product-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     justify-content: center;
 }
@@ -127,6 +127,14 @@ body {
     font-size: 1rem;
     color: #555;
     margin-bottom: 1rem;
+}
+
+.product-card:has(img[alt="OS3"]) {
+    grid-column: span 2;
+}
+
+.product-card:has(img[alt="ANS 1"]) {
+    grid-column: span 3;
 }
 
 .modal {
