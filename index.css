@@ -16,6 +16,11 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
 .navbar {
@@ -220,3 +225,4 @@ p, body, .navbar, .product-card, .modal-slide {
     font-size: 0.9rem;
     color: #777;
 }
+
