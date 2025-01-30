@@ -1,281 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terrano Gym Resident Portal</title>
-    <style>
-        :root {
-            --primary: #2563eb;
-            --secondary: #7c3aed;
-            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            --glass: rgba(255, 255, 255, 0.1);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional AV services for events, businesses, and homes. We provide audiovisual solutions, live streaming, equipment rental, and more.">
+  <meta name="keywords" content="AV services, audiovisual, live streaming, event production, equipment rental">
+  <meta name="author" content="Your AV Business">
+  <title>Your AV Business | Professional Audiovisual Solutions</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
 
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background: #0f172a;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      color: #2c3e50;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    a {
+      text-decoration: none;
+      color: #3498db;
+    }
 
-        h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 2rem;
-        }
+    a:hover {
+      color: #2980b9;
+    }
 
-        .section {
-            margin-bottom: 3rem;
-            background: var(--glass);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        }
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        .image-card {
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 0;
+    }
 
-        .image-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #34495e;
+      padding: 10px 0;
+    }
 
-        .image-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-        .image-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 0.75rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
+    nav a:hover {
+      color: #3498db;
+    }
 
-        .hero {
-            height: 400px;
-            background-image: url('Birth_of_a_supernova_nebulas_space_anomalies_masterpie_1_19c18988-4084-4018-a8b0-99ece862e385_0.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-radius: 16px;
-            margin-bottom: 2rem;
-            position: relative;
-        }
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 16px;
-        }
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
 
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+    .hero .cta-button {
+      background: #3498db;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
 
-        .hero p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-        }
+    .hero .cta-button:hover {
+      background: #2980b9;
+    }
 
-        .app-badges {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin: 2rem 0;
-        }
+    /* Services Section */
+    .services {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff;
+    }
 
-        .app-badge {
-            width: 150px;
-            transition: transform 0.2s;
-        }
+    .services h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
 
-        .app-badge:hover {
-            transform: scale(1.05);
-        }
+    .service-card {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .instructions {
-            background: rgba(241, 245, 249, 0.1);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-top: 1.5rem;
-        }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-        .instructions ol {
-            padding-left: 1.5rem;
-        }
+    .service-card i {
+      font-size: 2.5rem;
+      color: #3498db;
+      margin-bottom: 15px;
+    }
 
-        .instructions li {
-            margin-bottom: 1rem;
-        }
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
+    .service-card p {
+      font-size: 1rem;
+      color: #666;
+    }
 
-            .hero {
-                height: 300px;
-            }
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
 
-            .hero h2 {
-                font-size: 2rem;
-            }
+    footer p {
+      margin: 0;
+    }
 
-            .hero p {
-                font-size: 1rem;
-            }
+    footer a {
+      color: #3498db;
+    }
 
-            .app-badges {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    footer a:hover {
+      color: #2980b9;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .service-card {
+        margin: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Hero Section -->
-        <div class="hero">
-            <div class="hero-content">
-                <h2>Welcome to Terrano Gym</h2>
-                <p>Your fitness journey starts here</p>
-            </div>
-        </div>
+  <!-- Header -->
+  <header>
+    <h1>Your AV Business</h1>
+    <p>Professional Audiovisual Solutions for Every Event</p>
+  </header>
 
-        <!-- Wi-Fi Login Section -->
-        <div class="section">
-            <h1>📶 Wi-Fi Login</h1>
-            <div class="instructions">
-                <ol>
-                    <li>Open your device's Wi-Fi settings.</li>
-                    <li>Select the network: <strong>terrano gym resident</strong>.</li>
-                    <li>Enter the password: <strong>[Ask staff for password]</strong>.</li>
-                    <li>Accept terms if prompted.</li>
-                </ol>
-            </div>
-        </div>
+  <!-- Navigation -->
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <!-- Roku App Section -->
-        <div class="section">
-            <h1>📱 Roku Mobile App</h1>
-            <div class="app-badges">
-                <a href="https://play.google.com/store/apps/details?id=com.roku.remote" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="app-badge">
-                </a>
-                <a href="https://apps.apple.com/us/app/roku-remote-control/id1230255705" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="app-badge">
-                </a>
-            </div>
-            <div class="instructions">
-                <h2>How to Use the App as a Remote</h2>
-                <ol>
-                    <li>Download and install the Roku app.</li>
-                    <li>Connect your phone to the <strong>terrano gym resident</strong> Wi-Fi.</li>
-                    <li>Open the Roku app and select your TV location:
-                        <ul>
-                            <li>Upper Left: <strong>Gym_UL</strong></li>
-                            <li>Upper Right: <strong>Gym_UR</strong></li>
-                            <li>Lower Left: <strong>Gym_LL</strong></li>
-                            <li>Lower Right: <strong>Gym_LR</strong></li>
-                        </ul>
-                    </li>
-                    <li>Use the virtual remote to control the TV.</li>
-                </ol>
-            </div>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Transform Your Events with Expert AV Solutions</h2>
+    <p>From live streaming to equipment rental, we’ve got you covered.</p>
+    <a href="#contact" class="cta-button">Get a Quote</a>
+  </section>
 
-        <!-- Bluetooth Audio Section -->
-        <div class="section">
-            <h1>🎧 Bluetooth Audio Setup</h1>
-            <div class="instructions">
-                <h2>How to Listen to TV Audio</h2>
-                <ol>
-                    <li>Pair your Bluetooth device with the TV:
-                        <ul>
-                            <li>Upper Left: <strong>Gym_UL_Audio</strong></li>
-                            <li>Upper Right: <strong>Gym_UR_Audio</strong></li>
-                            <li>Lower Left: <strong>Gym_LL_Audio</strong></li>
-                            <li>Lower Right: <strong>Gym_LR_Audio</strong></li>
-                        </ul>
-                    </li>
-                    <li>Adjust volume using your device or the Roku app.</li>
-                    <li>Multiple users can connect to the same TV audio.</li>
-                </ol>
-            </div>
-        </div>
-
-        <!-- Image Gallery Section -->
-        <div class="section">
-            <h1>Explore Our Facilities</h1>
-            <div class="image-grid">
-                <div class="image-card">
-                    <img src="alchemyrefiner_alchemymagic_0_17753204-42d4-41ed-aab7-f6f7829b18c3_0.jpg" alt="Alchemy Magic">
-                    <div class="image-caption">Fitness Alchemy</div>
-                </div>
-                <div class="image-card">
-                    <img src="SYDKsobCQISm6UtUeyVpYA.webp" alt="Space Nebula">
-                    <div class="image-caption">Cosmic Workouts</div>
-                </div>
-                <div class="image-card">
-                    <img src="PhotoReal_captivating_art_fusion_of_Kenya_landscape_painted_ma_3.jpg" alt="Kenya Landscape">
-                    <div class="image-caption">Natural Inspiration</div>
-                </div>
-                <div class="image-card">
-                    <img src="https://example.com/Default_embark_upon_a_turbulent_odyssey_through_the_surreal_re_3.jpg" alt="Surreal Odyssey">
-                    <div class="image-caption">Surreal Fitness</div>
-                </div>
-            </div>
-        </div>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-card">
+      <i class="fas fa-video"></i>
+      <h3>Live Streaming</h3>
+      <p>Professional live streaming for events, webinars, and more.</p>
     </div>
+    <div class="service-card">
+      <i class="fas fa-microphone"></i>
+      <h3>Sound Systems</h3>
+      <p>High-quality audio setups for any occasion.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Lighting Design</h3>
+      <p>Custom lighting solutions to enhance your event.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Your AV Business. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+  </footer>
 </body>
 </html>
