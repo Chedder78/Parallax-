@@ -3,180 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terrano Gym Resident Portal</title>
+    <title>Terrano Gym Media Hub</title>
     <style>
         :root {
-            --primary: #2A5C82;
-            --secondary: #E8491D;
-            --light: #F8F9FA;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --glass: rgba(255, 255, 255, 0.1);
         }
 
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
-            background-color: var(--light);
-            color: #333;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
             padding: 1rem;
+            margin: 0;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            backdrop-filter: blur(16px);
+            background: var(--glass);
+            border-radius: 24px;
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         h1 {
-            color: var(--primary);
             text-align: center;
+            font-size: 2.5rem;
             margin-bottom: 2rem;
-            font-size: 2.2rem;
+            background: linear-gradient(45deg, #93c5fd 0%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        h2 {
-            color: var(--secondary);
-            margin: 1.5rem 0;
-            font-size: 1.5rem;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 0.5rem;
-        }
-
-        .section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #F8F9FA;
-            border-radius: 10px;
-        }
-
-        .step {
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: white;
-            border-left: 4px solid var(--primary);
-            border-radius: 5px;
-        }
-
-        .qr-note {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-            margin: 1rem 0;
-        }
-
-        .app-badges {
-            display: flex;
+        .tv-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
-            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .tv-location {
+            padding: 1.5rem;
+            background: var(--glass);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .tv-location:hover {
+            transform: translateY(-2px);
+        }
+
+        .step-card {
+            background: var(--glass);
+            padding: 1.5rem;
+            border-radius: 12px;
             margin: 1.5rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
         }
 
         .app-badge {
-            width: 150px;
-            transition: transform 0.2s;
+            padding: 1rem;
+            border-radius: 12px;
+            background: linear-gradient(145deg, rgba(37,99,235,0.3) 0%, rgba(124,58,237,0.3) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
         }
 
         .app-badge:hover {
-            transform: scale(1.05);
+            background: linear-gradient(145deg, rgba(37,99,235,0.5) 0%, rgba(124,58,237,0.5) 100%);
         }
 
-        .wifi-password {
-            background: #fff3cd;
+        .bluetooth-note {
+            background: rgba(96, 165, 250, 0.2);
             padding: 1rem;
-            border-radius: 5px;
-            margin: 1rem 0;
-            text-align: center;
-            font-weight: bold;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 1.5rem 0;
         }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 1rem;
+        @media (max-width: 600px) {
+            .tv-grid, .badge-grid {
+                grid-template-columns: 1fr;
             }
             
             h1 {
-                font-size: 1.8rem;
-            }
-            
-            .app-badges {
-                flex-direction: column;
-                align-items: center;
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🏋️ Terrano Gym Resident Portal</h1>
-        
-        <div class="qr-note">
-            Scanned via Terrano Gym QR Code • Version 1.2
+        <h1>🎯 Terrano Gym Media Control</h1>
+
+        <div class="step-card">
+            <h2>📲 Mobile Remote Setup</h2>
+            <ol>
+                <li>Connect to "terrano gym resident" WiFi</li>
+                <li>Download Roku app:
+                    <div class="badge-grid">
+                        <a href="https://play.google.com/store/apps/details?id=com.roku.remote" class="app-badge">
+                            Android Download
+                        </a>
+                        <a href="https://apps.apple.com/us/app/roku-remote-control/id1230255705" class="app-badge">
+                            iOS Download
+                        </a>
+                    </div>
+                </li>
+                <li>Open Roku app and follow these steps:
+                    <div class="tv-grid">
+                        <div class="tv-location">
+                            <strong>Upper Left TV</strong><br>
+                            Select "Gym_UL" in devices
+                        </div>
+                        <div class="tv-location">
+                            <strong>Upper Right TV</strong><br>
+                            Select "Gym_UR" in devices
+                        </div>
+                        <div class="tv-location">
+                            <strong>Lower Left TV</strong><br>
+                            Select "Gym_LL" in devices
+                        </div>
+                        <div class="tv-location">
+                            <strong>Lower Right TV</strong><br>
+                            Select "Gym_LR" in devices
+                        </div>
+                    </div>
+                </li>
+                <li>Use the virtual remote interface to control volume, channels, and input</li>
+            </ol>
         </div>
 
-        <div class="section">
-            <h2>📶 Wi-Fi Connection</h2>
-            <div class="step">
-                <strong>Network Name:</strong> terrano gym resident
+        <div class="step-card">
+            <h2>🎧 Bluetooth Audio Setup</h2>
+            <div class="bluetooth-note">
+                <strong>Multi-Listener Support:</strong> Up to 8 devices can pair simultaneously
             </div>
-            <div class="wifi-password">
-                🔒 Password: [ASK STAFF FOR PASSWORD]
-            </div>
-            <div class="step">
-                1. Open device Wi-Fi settings<br>
-                2. Select "terrano gym resident"<br>
-                3. Enter password when prompted<br>
-                4. Accept terms if required
-            </div>
+            <ol>
+                <li>Ensure TV is selected in Roku app</li>
+                <li>Open your device's Bluetooth settings</li>
+                <li>Look for device named corresponding to TV location:
+                    <ul>
+                        <li>Gym_UL_Audio</li>
+                        <li>Gym_UR_Audio</li>
+                        <li>Gym_LL_Audio</li>
+                        <li>Gym_LR_Audio</li>
+                    </ul>
+                </li>
+                <li>Pair your headphones/speaker</li>
+                <li>Audio will automatically route through your device</li>
+            </ol>
         </div>
 
-        <div class="section">
-            <h2>📱 Roku Mobile App</h2>
-            <div class="app-badges">
-                <a href="https://play.google.com/store/apps/details?id=com.roku.remote" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="app-badge">
-                </a>
-                <a href="https://apps.apple.com/us/app/roku-remote-control/id1230255705" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="app-badge">
-                </a>
+        <div class="step-card">
+            <h2>✨ Pro Tips</h2>
+            <div class="tv-grid">
+                <div class="tv-location">
+                    <strong>Keyboard Control</strong><br>
+                    Use app's text input for search
+                </div>
+                <div class="tv-location">
+                    <strong>Private Listening</strong><br>
+                    Connect personal headphones
+                </div>
+                <div class="tv-location">
+                    <strong>Volume Limit</strong><br>
+                    Max 75% for shared audio
+                </div>
+                <div class="tv-location">
+                    <strong>Need Help?</strong><br>
+                    Scan QR at equipment
+                </div>
             </div>
-            <div class="step">
-                After installation:<br>
-                1. Connect to gym Wi-Fi first<br>
-                2. Open Roku app<br>
-                3. Select "Terrano Gym TV"<br>
-                4. Use virtual remote
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>📺 Roku TV Controls</h2>
-            <div class="step">
-                <strong>Basic Controls:</strong><br>
-                ◀️▶️▲▼ Navigation arrows<br>
-                ⏺ OK button to select<br>
-                ⏪⏩ Rewind/Fast-forward<br>
-                ⏏️ Back button<br>
-                🔍 Search button
-            </div>
-            <div class="step">
-                <strong>Quick Tips:</strong><br>
-                • Press * for channel options<br>
-                • Long press Home for recent apps<br>
-                • Input menu for HDMI sources<br>
-                • Volume controls on side panel
-            </div>
-        </div>
-
-        <div class="qr-note">
-            Need help? Scan QR at equipment or ask gym staff.
         </div>
     </div>
+    <style>
+:root {
+    --primary: #2563eb;
+    --secondary: #7c3aed;
+    --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+body {
+    background: #f8fafc;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+.section {
+    background: rgba(248, 250, 252, 0.6);
+    border: 1px solid rgba(241, 245, 249, 0.8);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+    </style>
+
+    <div class="section">
+    <h2>📍 Select Your TV Location</h2>
+    <div class="tv-grid">
+        <div class="tv-card" data-tv="Gym_UL">
+            <div class="tv-indicator"></div>
+            <span>Upper Left</span>
+        </div>
+        <div class="tv-card" data-tv="Gym_UR">
+            <div class="tv-indicator"></div>
+            <span>Upper Right</span>
+        </div>
+        <div class="tv-card" data-tv="Gym_LL">
+            <div class="tv-indicator"></div>
+            <span>Lower Left</span>
+        </div>
+        <div class="tv-card" data-tv="Gym_LR">
+            <div class="tv-indicator"></div>
+            <span>Lower Right</span>
+        </div>
+    </div>
+</div>
+
+<style>
+.tv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.tv-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.tv-card:hover {
+    background: var(--gradient);
+    color: white;
+}
+
+.tv-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--secondary);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    opacity: 0.8;
+}
+</style>
+
+    <div class="section">
+    <h2>🎧 Shared Audio Setup</h2>
+    <div class="audio-guide">
+        <div class="audio-step">
+            <div class="step-number">1</div>
+            Pair your device with<br>
+            <code>TerranoTV_[Location]_Audio</code>
+        </div>
+        <div class="audio-step">
+            <div class="step-number">2</div>
+            Adjust volume in<br>
+            Roku app > Audio settings
+        </div>
+        <div class="audio-step">
+            <div class="step-number">3</div>
+            Multiple users can connect<br>
+            simultaneously
+        </div>
+    </div>
+</div>
+
+<style>
+.audio-guide {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+}
+
+.audio-step {
+    background: rgba(241, 245, 249, 0.6);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 32px;
+    height: 32px;
+    background: var(--gradient);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2rem auto 1rem;
+    font-weight: bold;
+}
+</style>
+    
 </body>
 </html>
