@@ -127,6 +127,37 @@
             opacity: 0.9;
         }
 
+        .app-badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .app-badge {
+            width: 150px;
+            transition: transform 0.2s;
+        }
+
+        .app-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .instructions {
+            background: rgba(241, 245, 249, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .instructions ol {
+            padding-left: 1.5rem;
+        }
+
+        .instructions li {
+            margin-bottom: 1rem;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -143,6 +174,11 @@
             .hero p {
                 font-size: 1rem;
             }
+
+            .app-badges {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -153,6 +189,68 @@
             <div class="hero-content">
                 <h2>Welcome to Terrano Gym</h2>
                 <p>Your fitness journey starts here</p>
+            </div>
+        </div>
+
+        <!-- Wi-Fi Login Section -->
+        <div class="section">
+            <h1>📶 Wi-Fi Login</h1>
+            <div class="instructions">
+                <ol>
+                    <li>Open your device's Wi-Fi settings.</li>
+                    <li>Select the network: <strong>terrano gym resident</strong>.</li>
+                    <li>Enter the password: <strong>[Ask staff for password]</strong>.</li>
+                    <li>Accept terms if prompted.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Roku App Section -->
+        <div class="section">
+            <h1>📱 Roku Mobile App</h1>
+            <div class="app-badges">
+                <a href="https://play.google.com/store/apps/details?id=com.roku.remote" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="app-badge">
+                </a>
+                <a href="https://apps.apple.com/us/app/roku-remote-control/id1230255705" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="app-badge">
+                </a>
+            </div>
+            <div class="instructions">
+                <h2>How to Use the App as a Remote</h2>
+                <ol>
+                    <li>Download and install the Roku app.</li>
+                    <li>Connect your phone to the <strong>terrano gym resident</strong> Wi-Fi.</li>
+                    <li>Open the Roku app and select your TV location:
+                        <ul>
+                            <li>Upper Left: <strong>Gym_UL</strong></li>
+                            <li>Upper Right: <strong>Gym_UR</strong></li>
+                            <li>Lower Left: <strong>Gym_LL</strong></li>
+                            <li>Lower Right: <strong>Gym_LR</strong></li>
+                        </ul>
+                    </li>
+                    <li>Use the virtual remote to control the TV.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Bluetooth Audio Section -->
+        <div class="section">
+            <h1>🎧 Bluetooth Audio Setup</h1>
+            <div class="instructions">
+                <h2>How to Listen to TV Audio</h2>
+                <ol>
+                    <li>Pair your Bluetooth device with the TV:
+                        <ul>
+                            <li>Upper Left: <strong>Gym_UL_Audio</strong></li>
+                            <li>Upper Right: <strong>Gym_UR_Audio</strong></li>
+                            <li>Lower Left: <strong>Gym_LL_Audio</strong></li>
+                            <li>Lower Right: <strong>Gym_LR_Audio</strong></li>
+                        </ul>
+                    </li>
+                    <li>Adjust volume using your device or the Roku app.</li>
+                    <li>Multiple users can connect to the same TV audio.</li>
+                </ol>
             </div>
         </div>
 
@@ -176,25 +274,6 @@
                     <img src="https://example.com/Default_embark_upon_a_turbulent_odyssey_through_the_surreal_re_3.jpg" alt="Surreal Odyssey">
                     <div class="image-caption">Surreal Fitness</div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Roku TV Section -->
-        <div class="section">
-            <h1>Roku TV Setup</h1>
-            <div class="image-grid">
-                <div class="image-card">
-                    <img src="https://example.com/Default_Birth_of_a_supernova_nebulas_space_anomalies_masterpie_1_19c18988-4084-4018-a8b0-99ece862e385_0.jpg" alt="Supernova Nebula">
-                    <div class="image-caption">Immersive Entertainment</div>
-                </div>
-            </div>
-            <div class="instructions">
-                <p>Control your TV with the Roku app:</p>
-                <ol>
-                    <li>Download the Roku app</li>
-                    <li>Connect to gym Wi-Fi</li>
-                    <li>Select your TV location</li>
-                </ol>
             </div>
         </div>
     </div>
