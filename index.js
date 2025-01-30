@@ -1,3 +1,42 @@
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const cardContainer = document.querySelector(".card-container");
+
+  // Add event listener to flip the card on click
+  cardContainer.addEventListener("click", () => {
+    cardContainer.classList.toggle("flipped");
+  });
+
+  // Create a Three.js scene for depth effect
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, 300 / 400, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ alpha: true });
+  renderer.setSize(300, 400);
+  renderer.domElement.style.position = "absolute";
+  renderer.domElement.style.top = "0";
+  renderer.domElement.style.left = "0";
+  renderer.domElement.style.pointerEvents = "none"; // Allow clicks to pass through
+  cardContainer.appendChild(renderer.domElement);
+
+  // Add a depth layer inside the card
+  const geometry = new THREE.BoxGeometry(2.8, 3.8, 0.2);
+  const material = new THREE.MeshBasicMaterial({ color: 0xcccccc, transparent: true, opacity: 0.5 });
+  const depthLayer = new THREE.Mesh(geometry, material);
+  depthLayer.position.z = -0.5; // Position inside the card
+  scene.add(depthLayer);
+
+  // Position the camera
+  camera.position.z = 5;
+
+  // Animation loop
+  const animate = () => {
+    requestAnimationFrame(animate);
+    depthLayer.rotation.y += 0.01; // Rotate the depth layer for a dynamic effect
+    renderer.render(scene, camera);
+  };
+  animate();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     // Add Ripple Effect on Buttons
     document.querySelectorAll('button').forEach(button => {
