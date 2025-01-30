@@ -160,3 +160,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchProducts();
 });
+import React, { useRef, useState } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
+function StoreModel() {
+  const gltfRef = useRef();
+  const [model, setModel] = useState(null);
+
+  useFrame(() => {
+    if (gltfRef.current) {
+      gltfRef.current.rotation.y += 0.01; // Rotate the model
+    }
+  });
+
+  const loader = new GLTFLoader();
+  loader.load('/models/store.glb', (gltf) => {
+    setModel(gltf.scene);
+  });
+
+  return model ? <primitive object={model} ref={gltfRef} /> : null;
+}
+
+export default function VirtualStore() {
+  return (
+    <Canvas>
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} />
+      <StoreModel />
+    </Canvas>
+  );
+}
